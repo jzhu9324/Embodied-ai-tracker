@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMBODIED AI TRACKER</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #ffb000;
+            font-family: 'IBM Plex Mono', 'Courier New', monospace;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* CRT扫描线效果 */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.15),
+                rgba(0, 0, 0, 0.15) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            pointer-events: none;
+            z-index: 1000;
+            animation: scanline 8s linear infinite;
+        }
+
+        @keyframes scanline {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(10px); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 头部 */
+        .header {
+            border: 2px solid #ffb000;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: rgba(255, 176, 0, 0.05);
+        }
+
+        .header h1 {
+            font-size: 24px;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            padding: 5px 0;
+            border-top: 1px solid #ffb000;
+            margin-top: 10px;
+        }
+
+        .loading-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bar {
+            display: inline-block;
+            width: 200px;
+            height: 16px;
+            border: 1px solid #ffb000;
+            position: relative;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: #ffb000;
+            width: 75%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { width: 75%; }
+            50% { width: 85%; }
+        }
+
+        /* 机器人学习状态 - Wall-E风格 */
+        .robot-status {
+            border: 2px solid #00ff00;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: rgba(0, 255, 0, 0.03);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .robot-avatar {
+            font-size: 16px;
+            line-height: 1.1;
+            white-space: pre;
+            color: #00ff00;
+            animation: robotBounce 2s ease-in-out infinite;
+            font-family: monospace;
+        }
+
+        @keyframes robotBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .robot-info {
+            flex: 1;
+        }
+
+        .robot-mood {
+            font-size: 18px;
+            color: #00ff00;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .robot-stats {
+            font-size: 12px;
+            color: #ffb000;
+            margin-top: 5px;
+        }
+
+        .knowledge-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .knowledge-meter {
+            flex: 1;
+            height: 20px;
+            border: 1px solid #00ff00;
+            position: relative;
+            background: rgba(0, 255, 0, 0.1);
+        }
+
+        .knowledge-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ff00, #00ff00 50%, #ffb000 100%);
+            transition: width 1s ease-out;
+            animation: shimmer 3s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -100% 0; }
+            100% { background-position: 100% 0; }
+        }
+
+        /* 摘要区块 */
+        .digest {
+            border: 2px solid #00ff00;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: rgba(0, 255, 0, 0.03);
+        }
+
+        .digest-title {
+            color: #00ff00;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .digest-title::before {
+            content: ">>";
+            animation: blink 1s step-start infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .digest-stats {
+            color: #00ff00;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .digest-content {
+            color: #ffb000;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        /* 新闻列表 */
+        .news-section {
+            border: 2px solid #ffb000;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        /* Tab切换 */
+        .news-tabs {
+            display: flex;
+            background: rgba(255, 176, 0, 0.1);
+            border-bottom: 2px solid #ffb000;
+        }
+
+        .tab-item {
+            flex: 1;
+            padding: 12px 20px;
+            text-align: center;
+            cursor: pointer;
+            color: #ffb000;
+            border-right: 1px solid #ffb000;
+            transition: all 0.3s;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .tab-item:last-child {
+            border-right: none;
+        }
+
+        .tab-item:hover {
+            background: rgba(255, 176, 0, 0.2);
+        }
+
+        .tab-item.active {
+            background: #ffb000;
+            color: #0a0a0a;
+        }
+
+        .news-content {
+            padding: 15px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #ffb000;
+        }
+
+        .news-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 3px solid #00ff00;
+            padding-left: 15px;
+            transition: all 0.3s;
+            cursor: pointer;
+            display: none;
+        }
+
+        .news-item.show {
+            display: block;
+        }
+
+        .news-item:hover {
+            background: rgba(255, 176, 0, 0.1);
+            transform: translateX(5px);
+            border-left-width: 5px;
+        }
+
+        .news-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-right: 10px;
+            border: 1px solid;
+        }
+
+        .tag-funding {
+            color: #00ff00;
+            border-color: #00ff00;
+        }
+
+        .tag-product {
+            color: #00d4ff;
+            border-color: #00d4ff;
+        }
+
+        .tag-paper {
+            color: #ff00ff;
+            border-color: #ff00ff;
+        }
+
+        .tag-news {
+            color: #ffb000;
+            border-color: #ffb000;
+        }
+
+        .news-title {
+            font-size: 14px;
+            margin: 5px 0;
+            color: #ffffff;
+        }
+
+        .news-meta {
+            font-size: 11px;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        .news-link {
+            color: #00ff00;
+            text-decoration: none;
+            border-bottom: 1px dotted #00ff00;
+        }
+
+        .news-link:hover {
+            color: #00ff00;
+            text-decoration: none;
+            animation: flicker 0.5s;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* 底部导航 */
+        .nav {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            padding: 15px;
+            border: 2px solid #ffb000;
+            background: rgba(255, 176, 0, 0.05);
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            color: #ffb000;
+            text-decoration: none;
+            padding: 5px 15px;
+            border: 1px solid #ffb000;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-item:hover {
+            background: #ffb000;
+            color: #0a0a0a;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #ffb000;
+        }
+
+        .nav-item:active {
+            transform: scale(0.95);
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 18px;
+            }
+
+            .bar {
+                width: 120px;
+            }
+
+            .robot-status {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .robot-avatar {
+                font-size: 14px;
+            }
+
+            .news-tabs {
+                flex-wrap: wrap;
+            }
+
+            .tab-item {
+                flex: 1 1 50%;
+                border-bottom: 1px solid #ffb000;
+            }
+        }
+
+        /* 机器人不同心情的样式 */
+        .mood-excited .robot-avatar {
+            color: #00ff00;
+            animation: robotExcited 0.5s ease-in-out infinite;
+        }
+
+        @keyframes robotExcited {
+            0%, 100% { transform: translateY(0) rotate(-1deg); }
+            50% { transform: translateY(-8px) rotate(1deg); }
+        }
+
+        .mood-happy .robot-avatar {
+            color: #00ff00;
+        }
+
+        .mood-normal .robot-avatar {
+            color: #ffb000;
+        }
+
+        .mood-sleepy .robot-avatar {
+            color: #888;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1>╔═══════════════════════════════════════════════╗</h1>
+            <h1>║  EMBODIED INTELLIGENCE TRACKER               ║</h1>
+            <h1>╚═══════════════════════════════════════════════╝</h1>
+            <div class="status-bar">
+                <div>STATUS: SYSTEM READY ✓</div>
+                <div>LAST SCAN: 2026-01-29 00:03:42 UTC</div>
+            </div>
+        </div>
+
+        <!-- Wall-E风格机器人学习状态 -->
+        <div class="robot-status mood-excited">
+            <div class="robot-avatar"> ___
+(◕‿◕)
+ ---
+ _|_
+|   |
+ oo</div>
+            <div class="robot-info">
+                <div class="robot-mood">🤖 WALL-E STATUS: EXCITED!</div>
+                <div style="color: #ffb000; font-size: 13px; margin-bottom: 8px;">
+                    "哇哇哇！今天有24条新信息！Physical Intelligence融资太疯狂了！我要把这些都存到记忆库里~"
+                </div>
+                <div class="robot-stats">
+                    📚 Today's Learning: 24 items | 💰 2 funding deals | 📄 12 papers | 🔧 7 product updates
+                </div>
+                <div class="knowledge-bar">
+                    <span style="color: #00ff00; font-size: 11px;">KNOWLEDGE:</span>
+                    <div class="knowledge-meter">
+                        <div class="knowledge-fill" style="width: 80%;"></div>
+                    </div>
+                    <span style="color: #00ff00; font-size: 11px;">80%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 今日摘要 -->
+        <div class="digest">
+            <div class="digest-title">TODAY'S DIGEST</div>
+            <div class="digest-stats">
+                🤖 7 company updates | 📄 12 new papers | 💰 2 funding deals | 🔥 24 total items
+            </div>
+            <div class="digest-content">
+                KEY INSIGHT: Physical Intelligence dominates headlines with massive $600M Series B raise,
+                pushing embodied AI valuation to record $5.6B. Meanwhile, Figure AI showcases breakthrough
+                dexterous manipulation capabilities with Gen 3 hands, signaling rapid progress in hardware.
+                Academic community releases 3 major foundation model papers from Berkeley and Stanford labs...
+            </div>
+        </div>
+
+        <!-- 新闻列表（带Tab切换） -->
+        <div class="news-section">
+            <!-- Tab导航 -->
+            <div class="news-tabs">
+                <div class="tab-item active" data-category="all">
+                    [ALL] (24)
+                </div>
+                <div class="tab-item" data-category="funding">
+                    [💰 FUNDING] (2)
+                </div>
+                <div class="tab-item" data-category="product">
+                    [🔧 PRODUCT] (7)
+                </div>
+                <div class="tab-item" data-category="paper">
+                    [📄 PAPER] (12)
+                </div>
+                <div class="tab-item" data-category="news">
+                    [📰 新闻] (3)
+                </div>
+            </div>
+
+            <!-- 新闻内容 -->
+            <div class="news-content">
+                <div class="section-title">┌─ LAST 24 HOURS ─────────────────────────────────┐</div>
+
+                <div class="news-item show" data-category="funding">
+                    <span class="news-tag tag-funding">[💰 FUNDING]</span>
+                    <div class="news-title">Physical Intelligence closes massive $600M Series B</div>
+                    <div class="news-meta">
+                        Led by Capital G (Alphabet), valuation reaches $5.6B. Existing investors Lux Capital,
+                        Thrive Capital, and Jeff Bezos participate. Marks largest robotics AI funding round in 2025.
+                        <br>
+                        <a href="#" class="news-link">> Read full story</a> | 2 hours ago | Source: TechCrunch
+                    </div>
+                </div>
+
+                <div class="news-item show" data-category="product">
+                    <span class="news-tag tag-product">[🔧 PRODUCT]</span>
+                    <div class="news-title">Figure AI demos Gen 3 dexterous hands in factory setting</div>
+                    <div class="news-meta">
+                        12-DoF hands show unprecedented manipulation capability, successfully assembling complex
+                        automotive components. Partnership with BMW accelerates deployment timeline.
+                        <br>
+                        <a href="#" class="news-link">> Watch demo video</a> | 5 hours ago | Source: Figure AI Blog
+                    </div>
+                </div>
+
+                <div class="news-item show" data-category="paper">
+                    <span class="news-tag tag-paper">[📄 PAPER]</span>
+                    <div class="news-title">Berkeley releases "Foundation Models for Dexterous Manipulation"</div>
+                    <div class="news-meta">
+                        Pieter Abbeel, Sergey Levine et al. present unified framework for robot learning.
+                        Accepted at RSS 2025. Code and models to be open-sourced.
+                        <br>
+                        <a href="#" class="news-link">> arXiv preprint</a> | 8 hours ago | Source: arXiv
+                    </div>
+                </div>
+
+                <div class="news-item show" data-category="funding">
+                    <span class="news-tag tag-funding">[💰 FUNDING]</span>
+                    <div class="news-title">中国银河通用机器人完成3亿美元融资</div>
+                    <div class="news-meta">
+                        宁德时代、中国移动、美团战投联合领投，估值达30亿美元。专注工业场景的灵巧操作技术。
+                        <br>
+                        <a href="#" class="news-link">> 查看详情</a> | 12 hours ago | Source: 36氪
+                    </div>
+                </div>
+
+                <div class="news-item show" data-category="product">
+                    <span class="news-tag tag-product">[🔧 PRODUCT]</span>
+                    <div class="news-title">Tesla Optimus Gen 3 spotted in Fremont factory floor</div>
+                    <div class="news-meta">
+                        Leaked footage shows significant improvements in locomotion and load-bearing capacity.
+                        Elon Musk hints at "major announcement" coming in Q1 2025.
+                        <br>
+                        <a href="#" class="news-link">> Watch footage</a> | 15 hours ago | Source: Twitter/X
+                    </div>
+                </div>
+
+                <div class="news-item show" data-category="paper">
+                    <span class="news-tag tag-paper">[📄 PAPER]</span>
+                    <div class="news-title">Stanford: "Sim-to-Real Transfer via Vision-Language Models"</div>
+                    <div class="news-meta">
+                        Chelsea Finn's lab demonstrates zero-shot transfer of policies trained entirely in
+                        simulation. Breakthrough in reducing real-world data requirements.
+                        <br>
+                        <a href="#" class="news-link">> Read paper</a> | 18 hours ago | Source: arXiv
+                    </div>
+                </div>
+
+                <div class="news-item show" data-category="product">
+                    <span class="news-tag tag-product">[🔧 PRODUCT]</span>
+                    <div class="news-title">宇树科技G1人形机器人价格降至9.9万元</div>
+                    <div class="news-meta">
+                        量产规模扩大带来成本下降，成为全球最具性价比的人形机器人产品。预售订单已超1000台。
+                        <br>
+                        <a href="#" class="news-link">> 了解更多</a> | 20 hours ago | Source: 宇树科技官网
+                    </div>
+                </div>
+
+                <div class="section-title">└──────────────────────────────────────────────────┘</div>
+            </div>
+        </div>
+
+        <!-- 底部导航 -->
+        <div class="nav">
+            <a href="#home" class="nav-item" title="返回首页">[HOME]</a>
+            <a href="#timeline" class="nav-item" title="按月时间线">[TIMELINE]</a>
+            <a href="#search" class="nav-item" title="搜索">[SEARCH]</a>
+        </div>
+
+        <!-- 页脚信息 -->
+        <div style="text-align: center; margin-top: 30px; padding: 20px; border-top: 1px dashed #ffb000; color: #888; font-size: 11px;">
+            <p>TRACKING THE FUTURE WITH RETRO STYLE | POWERED BY EMBODIED AI TRACKER</p>
+            <p style="margin-top: 5px;">🤖 MAKING ROBOTS SMARTER, ONE DAY AT A TIME</p>
+        </div>
+    </div>
+
+    <script>
+        // Tab切换功能
+        document.querySelectorAll('.tab-item').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // 更新active状态
+                document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                // 筛选新闻
+                const category = this.dataset.category;
+                const newsItems = document.querySelectorAll('.news-item');
+
+                newsItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.classList.add('show');
+                    } else {
+                        item.classList.remove('show');
+                    }
+                });
+            });
+        });
+
+        // 更新机器人心情
+        function updateRobotMood(itemCount) {
+            const robotStatus = document.querySelector('.robot-status');
+            const moodText = document.querySelector('.robot-mood');
+            const robotQuote = document.querySelector('.robot-info > div:nth-child(2)');
+            const knowledgeFill = document.querySelector('.knowledge-fill');
+
+            // 根据信息数量改变心情
+            if (itemCount >= 30) {
+                robotStatus.className = 'robot-status mood-excited';
+                moodText.textContent = '🤖 WALL-E STATUS: OVERLOADED! 🚀';
+                robotQuote.textContent = '"嘀嘀嘀！信息太多了！我的小脑袋快装不下啦！但是好开心~"';
+                knowledgeFill.style.width = '95%';
+            } else if (itemCount >= 16) {
+                robotStatus.className = 'robot-status mood-excited';
+                moodText.textContent = '🤖 WALL-E STATUS: EXCITED!';
+                robotQuote.textContent = '"哇哇哇！今天有这么多新发现！Physical Intelligence融资太疯狂了！我要把这些都存到记忆库里~"';
+                knowledgeFill.style.width = '80%';
+            } else if (itemCount >= 6) {
+                robotStatus.className = 'robot-status mood-happy';
+                moodText.textContent = '🤖 WALL-E STATUS: HAPPY';
+                robotQuote.textContent = '"嘿嘿，今天学到了一些有趣的东西！我最喜欢学习新知识了~"';
+                knowledgeFill.style.width = '60%';
+            } else {
+                robotStatus.className = 'robot-status mood-sleepy';
+                moodText.textContent = '🤖 WALL-E STATUS: SLEEPY...';
+                robotQuote.textContent = '"呼噜噜...今天好安静呀...机器人们是不是都去睡觉了？我也想睡..."';
+                knowledgeFill.style.width = '30%';
+            }
+        }
+
+        // 页面加载时初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 模拟当前有24条信息
+            const currentItemCount = 24;
+            updateRobotMood(currentItemCount);
+
+            // 新闻项点击效果
+            document.querySelectorAll('.news-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    // 点击时高亮效果
+                    this.style.transition = 'all 0.2s';
+                    const originalBg = this.style.background;
+                    this.style.background = 'rgba(0,255,0,0.2)';
+                    setTimeout(() => {
+                        this.style.background = originalBg;
+                    }, 300);
+                });
+            });
+
+            // 随机闪烁效果
+            setInterval(() => {
+                const items = document.querySelectorAll('.news-item.show');
+                if (items.length > 0) {
+                    const randomItem = items[Math.floor(Math.random() * items.length)];
+                    randomItem.style.opacity = '0.7';
+                    setTimeout(() => {
+                        randomItem.style.opacity = '1';
+                    }, 100);
+                }
+            }, 5000);
+
+            // 机器人呼吸效果
+            setInterval(() => {
+                const robot = document.querySelector('.robot-avatar');
+                robot.style.opacity = '0.85';
+                setTimeout(() => {
+                    robot.style.opacity = '1';
+                }, 500);
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
