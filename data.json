@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-01-29T20:10:26.100148",
-  "total_items": 22,
+  "last_updated": "2026-01-29T20:28:52.732200",
+  "total_items": 20,
   "data": {
     "papers": [
       {
@@ -114,83 +114,67 @@
     ],
     "news": [
       {
+        "title": "Reducing model drift and finetuning cost without retraining",
+        "link": "https://news.ycombinator.com/item?id=46809214",
+        "source": "Hacker News",
+        "category": "news",
+        "timestamp": "2026-01-29T20:23:07"
+      },
+      {
+        "title": "Microsoft's AI Spend Is Starting to Spook Investors",
+        "link": "https://gizmodo.com/microsofts-ai-spend-is-starting-to-spook-investors-2000715208",
+        "source": "Hacker News",
+        "category": "news",
+        "timestamp": "2026-01-29T20:19:45"
+      },
+      {
+        "title": "How much people believe on AI 2027?",
+        "link": "https://news.ycombinator.com/item?id=46809155",
+        "source": "Hacker News",
+        "category": "news",
+        "timestamp": "2026-01-29T20:16:09"
+      },
+      {
+        "title": "Show HN: Video feed experiment without login nor AI",
+        "link": "https://infinijest.com",
+        "source": "Hacker News",
+        "category": "news",
+        "timestamp": "2026-01-29T20:14:39"
+      },
+      {
         "title": "TÜV Report 2026: Tesla Model Y has the worst reliability of all 2022–2023 cars",
         "link": "https://www.autoevolution.com/news/tuev-report-2026-tesla-model-y-has-the-worst-reliability-among-all-20222023-cars-261596.html",
         "source": "Hacker News",
         "category": "news",
         "timestamp": "2026-01-29T20:07:45"
-      },
-      {
-        "title": "The Tech Market Is Fundamentally Fucked Up – AI Is Just a Scapegoat",
-        "link": "https://bayramovanar.substack.com/p/tech-market-is-fucked-up",
-        "source": "Hacker News",
-        "category": "news",
-        "timestamp": "2026-01-29T20:03:13"
-      },
-      {
-        "title": "Boston Dynamics' New Atlas Robot Makes Public Debut with Jaunty Human Walk",
-        "link": "https://www.cnet.com/tech/computing/boston-dynamics-new-atlas-robot-make-public-debut-with-jaunty-human-walk/",
-        "source": "Hacker News",
-        "category": "news",
-        "timestamp": "2026-01-29T20:01:39"
-      },
-      {
-        "title": "Created an Album with Suno AI",
-        "link": "https://music.youtube.com/playlist?list=OLAK5uy_mUu1asIk_LUFjoJ780XodzDkCjPKqWZQw&si=ecmSXJ8l8N0GbM-S",
-        "source": "Hacker News",
-        "category": "news",
-        "timestamp": "2026-01-29T19:57:37"
-      },
-      {
-        "title": "Show HN: LinuxWhisper – A native AI voice assistant for Linux (Groq/GTK)",
-        "link": "https://github.com/Dianjeol/LinuxWhisper",
-        "source": "Hacker News",
-        "category": "news",
-        "timestamp": "2026-01-29T19:55:23"
       }
     ],
     "funding": [
       {
         "title": "Physical Intelligence closes massive $600M Series B",
-        "description": "Led by Capital G (Alphabet), valuation reaches $5.6B",
+        "description": "Led by Capital G (Alphabet), valuation reaches $5.6B. Marks largest robotics AI funding round.",
         "link": "#",
         "category": "funding",
         "source": "TechCrunch",
-        "timestamp": "2026-01-29T20:10:26.100074"
+        "timestamp": "2026-01-29T18:28:52.732172"
       },
       {
         "title": "中国银河通用机器人完成3亿美元融资",
-        "description": "宁德时代、中国移动、美团战投联合领投",
+        "description": "宁德时代、中国移动、美团战投联合领投，专注工业场景的灵巧操作技术",
         "link": "#",
         "category": "funding",
         "source": "36氪",
-        "timestamp": "2026-01-29T08:10:26.100099"
+        "timestamp": "2026-01-29T08:28:52.732194"
       }
     ],
     "products": [
       {
-        "title": "Figure AI demos Gen 3 dexterous hands in factory setting",
-        "description": "12-DoF hands show unprecedented manipulation capability",
+        "title": "Example: Recent Product Update",
+        "description": "This is a placeholder for recent product updates. Real data will be scraped.",
         "link": "#",
         "category": "product",
-        "source": "Figure AI Blog",
-        "timestamp": "2026-01-29T15:10:26.100122"
-      },
-      {
-        "title": "Tesla Optimus Gen 3 spotted in Fremont factory floor",
-        "description": "Significant improvements in locomotion and load-bearing",
-        "link": "#",
-        "category": "product",
-        "source": "Twitter/X",
-        "timestamp": "2026-01-29T05:10:26.100130"
-      },
-      {
-        "title": "宇树科技G1人形机器人价格降至9.9万元",
-        "description": "量产规模扩大带来成本下降",
-        "link": "#",
-        "category": "product",
-        "source": "宇树科技官网",
-        "timestamp": "2026-01-29T00:10:26.100138"
+        "source": "Demo",
+        "timestamp": "2026-01-29T18:28:52.732172"
       }
     ]
   }

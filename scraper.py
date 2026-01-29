@@ -133,19 +133,21 @@ class EmbodiedAIScraper:
         """添加模拟数据（用于演示和测试）"""
         print("🎭 Adding mock data for demonstration...")
 
-        # 融资信息
+        # 融资信息 - 模拟为近期
+        recent_time = datetime.now() - timedelta(hours=2)
+
         self.results['funding'].extend([
             {
                 'title': 'Physical Intelligence closes massive $600M Series B',
-                'description': 'Led by Capital G (Alphabet), valuation reaches $5.6B',
+                'description': 'Led by Capital G (Alphabet), valuation reaches $5.6B. Marks largest robotics AI funding round.',
                 'link': '#',
                 'category': 'funding',
                 'source': 'TechCrunch',
-                'timestamp': datetime.now().isoformat()
+                'timestamp': recent_time.isoformat()
             },
             {
                 'title': '中国银河通用机器人完成3亿美元融资',
-                'description': '宁德时代、中国移动、美团战投联合领投',
+                'description': '宁德时代、中国移动、美团战投联合领投，专注工业场景的灵巧操作技术',
                 'link': '#',
                 'category': 'funding',
                 'source': '36氪',
@@ -153,31 +155,15 @@ class EmbodiedAIScraper:
             }
         ])
 
-        # 产品信息
+        # 只添加最近的产品更新样例，不添加过时新闻
         self.results['products'].extend([
             {
-                'title': 'Figure AI demos Gen 3 dexterous hands in factory setting',
-                'description': '12-DoF hands show unprecedented manipulation capability',
+                'title': 'Example: Recent Product Update',
+                'description': 'This is a placeholder for recent product updates. Real data will be scraped.',
                 'link': '#',
                 'category': 'product',
-                'source': 'Figure AI Blog',
-                'timestamp': (datetime.now() - timedelta(hours=5)).isoformat()
-            },
-            {
-                'title': 'Tesla Optimus Gen 3 spotted in Fremont factory floor',
-                'description': 'Significant improvements in locomotion and load-bearing',
-                'link': '#',
-                'category': 'product',
-                'source': 'Twitter/X',
-                'timestamp': (datetime.now() - timedelta(hours=15)).isoformat()
-            },
-            {
-                'title': '宇树科技G1人形机器人价格降至9.9万元',
-                'description': '量产规模扩大带来成本下降',
-                'link': '#',
-                'category': 'product',
-                'source': '宇树科技官网',
-                'timestamp': (datetime.now() - timedelta(hours=20)).isoformat()
+                'source': 'Demo',
+                'timestamp': recent_time.isoformat()
             }
         ])
 

@@ -47,21 +47,42 @@ class HTMLGenerator:
             if not timestamp_str:
                 return "recently"
 
+            # 解析时间戳
             timestamp = datetime.fromisoformat(timestamp_str.replace('Z', '+00:00'))
-            now = datetime.now(timestamp.tzinfo) if timestamp.tzinfo else datetime.now()
+
+            # 当前时间（使用本地时区）
+            from datetime import timezone
+
+            # 如果timestamp没有时区信息，加上本地时区
+            if timestamp.tzinfo is None:
+                # 假设是UTC时间（因为arXiv等都用UTC）
+                timestamp = timestamp.replace(tzinfo=timezone.utc)
+
+            now = datetime.now(timezone.utc)
+
+            # 转为UTC比较
+            if timestamp.tzinfo:
+                timestamp = timestamp.astimezone(timezone.utc)
+
             delta = now - timestamp
 
             hours = int(delta.total_seconds() / 3600)
             if hours < 1:
-                return "just now"
+                minutes = int(delta.total_seconds() / 60) if delta.total_seconds() > 0 else 0
+                if minutes <= 1:
+                    return "just now"
+                return f"{minutes} min ago"
             elif hours == 1:
                 return "1 hour ago"
             elif hours < 24:
                 return f"{hours} hours ago"
+            elif hours < 48:
+                return "1 day ago"
             else:
                 days = int(hours / 24)
-                return f"{days} day{'s' if days > 1 else ''} ago"
-        except:
+                return f"{days} days ago"
+        except Exception as e:
+            print(f"Error formatting time: {e}")
             return "recently"
 
     def calculate_robot_mood(self, total_items: int) -> Dict:
