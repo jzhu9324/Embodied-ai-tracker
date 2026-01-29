@@ -1,0 +1,197 @@
+{
+  "last_updated": "2026-01-29T20:10:26.100148",
+  "total_items": 22,
+  "data": {
+    "papers": [
+      {
+        "title": "Open-Vocabulary Functional 3D Human-Scene Interaction Generation",
+        "authors": "Jie Liu, Yu Sun, Alpar Cseke",
+        "summary": "Generating 3D humans that functionally interact with 3D scenes remains an open problem with applications in embodied AI, robotics, and interactive content creation. The key challenge involves reasonin...",
+        "link": "https://arxiv.org/abs/2601.20835v1",
+        "published": "2026-01-28T18:34:25Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "Compression Tells Intelligence: Visual Coding, Visual Token Technology, and the Unification",
+        "authors": "Xin Jin, Jinming Liu, Yuntao Wei",
+        "summary": "\"Compression Tells Intelligence\", is supported by research in artificial intelligence, particularly concerning (multimodal) large language models (LLMs/MLLMs), where compression efficiency often corre...",
+        "link": "https://arxiv.org/abs/2601.20742v1",
+        "published": "2026-01-28T16:18:20Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "RF-MatID: Dataset and Benchmark for Radio Frequency Material Identification",
+        "authors": "Xinyan Chen, Qinchun Li, Ruiqin Ma",
+        "summary": "Accurate material identification plays a crucial role in embodied AI systems, enabling a wide range of applications. However, current vision-based solutions are limited by the inherent constraints of ...",
+        "link": "https://arxiv.org/abs/2601.20377v1",
+        "published": "2026-01-28T08:43:48Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "UniMGS: Unifying Mesh and 3D Gaussian Splatting with Single-Pass Rasterization and Proxy-Based Deformation",
+        "authors": "Zeyu Xiao, Mingyang Sun, Yimin Cong",
+        "summary": "Joint rendering and deformation of mesh and 3D Gaussian Splatting (3DGS) have significant value as both representa tions offer complementary advantages for graphics applica tions. However, due to diff...",
+        "link": "https://arxiv.org/abs/2601.19233v1",
+        "published": "2026-01-27T06:05:14Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "HumanoidTurk: Expanding VR Haptics with Humanoids for Driving Simulations",
+        "authors": "DaeHo Lee, Ryo Suzuki, Jin-Hyuk Hong",
+        "summary": "We explore how humanoid robots can be repurposed as haptic media, extending beyond their conventional role as social, assistive, collaborative agents. To illustrate this approach, we implemented Human...",
+        "link": "https://arxiv.org/abs/2601.18975v1",
+        "published": "2026-01-26T21:19:08Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "Fauna Sprout: A lightweight, approachable, developer-ready humanoid robot",
+        "authors": "Fauna Robotics, :, Diego Aldarondo",
+        "summary": "Recent advances in learned control, large-scale simulation, and generative models have accelerated progress toward general-purpose robotic controllers, yet the field still lacks platforms suitable for...",
+        "link": "https://arxiv.org/abs/2601.18963v1",
+        "published": "2026-01-26T21:04:01Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "Advances and Innovations in the Multi-Agent Robotic System (MARS) Challenge",
+        "authors": "Li Kang, Heng Zhou, Xiufeng Song",
+        "summary": "Recent advancements in multimodal large language models and vision-languageaction models have significantly driven progress in Embodied AI. As the field transitions toward more complex task scenarios,...",
+        "link": "https://arxiv.org/abs/2601.18733v1",
+        "published": "2026-01-26T17:56:19Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "TC-IDM: Grounding Video Generation for Executable Zero-shot Robot Motion",
+        "authors": "Weishi Mi, Yong Bao, Xiaowei Chi",
+        "summary": "The vision-language-action (VLA) paradigm has enabled powerful robotic control by leveraging vision-language models, but its reliance on large-scale, high-quality robot data limits its generalization....",
+        "link": "https://arxiv.org/abs/2601.18323v1",
+        "published": "2026-01-26T10:06:56Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "SPACE-CLIP: Spatial Perception via Adaptive CLIP Embeddings for Monocular Depth Estimation",
+        "authors": "Taewan Cho, Taeryang Kim, Andrew Jaeyong Choi",
+        "summary": "Contrastive Language-Image Pre-training (CLIP) has accomplished extraordinary success for semantic understanding but inherently struggles to perceive geometric structure. Existing methods attempt to b...",
+        "link": "https://arxiv.org/abs/2601.17657v1",
+        "published": "2026-01-25T02:32:01Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "MetaWorld: Skill Transfer and Composition in a Hierarchical World Model for Grounding High-Level Instructions",
+        "authors": "Yutong Shen, Hangxu Liu, Kailin Pei",
+        "summary": "Humanoid robot loco-manipulation remains constrained by the semantic-physical gap. Current methods face three limitations: Low sample efficiency in reinforcement learning, poor generalization in imita...",
+        "link": "https://arxiv.org/abs/2601.17507v1",
+        "published": "2026-01-24T16:11:45Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes",
+        "authors": "Xinru Cui, Linxi Feng, Yixuan Zhou",
+        "summary": "Humanoid robots hold great potential for diverse interactions and daily service tasks within human-centered environments, necessitating controllers that seamlessly integrate precise locomotion with de...",
+        "link": "https://arxiv.org/abs/2601.17440v1",
+        "published": "2026-01-24T12:25:20Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "Real-Time Synchronized Interaction Framework for Emotion-Aware Humanoid Robots",
+        "authors": "Yanrong Chen, Xihan Bian",
+        "summary": "As humanoid robots increasingly introduced into social scene, achieving emotionally synchronized multimodal interaction remains a significant challenges. To facilitate the further adoption and integra...",
+        "link": "https://arxiv.org/abs/2601.17287v1",
+        "published": "2026-01-24T03:53:09Z",
+        "category": "paper",
+        "source": "arXiv"
+      }
+    ],
+    "news": [
+      {
+        "title": "TÜV Report 2026: Tesla Model Y has the worst reliability of all 2022–2023 cars",
+        "link": "https://www.autoevolution.com/news/tuev-report-2026-tesla-model-y-has-the-worst-reliability-among-all-20222023-cars-261596.html",
+        "source": "Hacker News",
+        "category": "news",
+        "timestamp": "2026-01-29T20:07:45"
+      },
+      {
+        "title": "The Tech Market Is Fundamentally Fucked Up – AI Is Just a Scapegoat",
+        "link": "https://bayramovanar.substack.com/p/tech-market-is-fucked-up",
+        "source": "Hacker News",
+        "category": "news",
+        "timestamp": "2026-01-29T20:03:13"
+      },
+      {
+        "title": "Boston Dynamics' New Atlas Robot Makes Public Debut with Jaunty Human Walk",
+        "link": "https://www.cnet.com/tech/computing/boston-dynamics-new-atlas-robot-make-public-debut-with-jaunty-human-walk/",
+        "source": "Hacker News",
+        "category": "news",
+        "timestamp": "2026-01-29T20:01:39"
+      },
+      {
+        "title": "Created an Album with Suno AI",
+        "link": "https://music.youtube.com/playlist?list=OLAK5uy_mUu1asIk_LUFjoJ780XodzDkCjPKqWZQw&si=ecmSXJ8l8N0GbM-S",
+        "source": "Hacker News",
+        "category": "news",
+        "timestamp": "2026-01-29T19:57:37"
+      },
+      {
+        "title": "Show HN: LinuxWhisper – A native AI voice assistant for Linux (Groq/GTK)",
+        "link": "https://github.com/Dianjeol/LinuxWhisper",
+        "source": "Hacker News",
+        "category": "news",
+        "timestamp": "2026-01-29T19:55:23"
+      }
+    ],
+    "funding": [
+      {
+        "title": "Physical Intelligence closes massive $600M Series B",
+        "description": "Led by Capital G (Alphabet), valuation reaches $5.6B",
+        "link": "#",
+        "category": "funding",
+        "source": "TechCrunch",
+        "timestamp": "2026-01-29T20:10:26.100074"
+      },
+      {
+        "title": "中国银河通用机器人完成3亿美元融资",
+        "description": "宁德时代、中国移动、美团战投联合领投",
+        "link": "#",
+        "category": "funding",
+        "source": "36氪",
+        "timestamp": "2026-01-29T08:10:26.100099"
+      }
+    ],
+    "products": [
+      {
+        "title": "Figure AI demos Gen 3 dexterous hands in factory setting",
+        "description": "12-DoF hands show unprecedented manipulation capability",
+        "link": "#",
+        "category": "product",
+        "source": "Figure AI Blog",
+        "timestamp": "2026-01-29T15:10:26.100122"
+      },
+      {
+        "title": "Tesla Optimus Gen 3 spotted in Fremont factory floor",
+        "description": "Significant improvements in locomotion and load-bearing",
+        "link": "#",
+        "category": "product",
+        "source": "Twitter/X",
+        "timestamp": "2026-01-29T05:10:26.100130"
+      },
+      {
+        "title": "宇树科技G1人形机器人价格降至9.9万元",
+        "description": "量产规模扩大带来成本下降",
+        "link": "#",
+        "category": "product",
+        "source": "宇树科技官网",
+        "timestamp": "2026-01-29T00:10:26.100138"
+      }
+    ]
+  }
+}
