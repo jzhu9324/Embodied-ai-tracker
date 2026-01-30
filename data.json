@@ -1,23 +1,95 @@
 {
-  "last_updated": "2026-01-30T16:46:09.854606",
-  "total_items": 20,
+  "last_updated": "2026-01-30T19:10:55.481755",
+  "total_items": 25,
   "data": {
     "papers": [
       {
-        "title": "PLANING: A Loosely Coupled Triangle-Gaussian Framework for Streaming 3D Reconstruction",
-        "authors": "Changjian Jiang, Kerui Ren, Xudong Li",
-        "summary": "Streaming reconstruction from monocular image sequences remains challenging, as existing methods typically favor either high-quality rendering or accurate geometry, but rarely both. We present PLANING...",
-        "link": "https://arxiv.org/abs/2601.22046v1",
-        "published": "2026-01-29T17:47:26Z",
+        "title": "DynamicVLA: A Vision-Language-Action Model for Dynamic Object Manipulation",
+        "authors": "Haozhe Xie, Beichen Wen, Jiarui Zheng",
+        "summary": "Manipulating dynamic objects remains an open challenge for Vision-Language-Action (VLA) models, which, despite strong generalization in static manipulation, struggle in dynamic scenarios requiring rap...",
+        "link": "https://arxiv.org/abs/2601.22153v1",
+        "published": "2026-01-29T18:59:51Z",
         "category": "paper",
         "source": "arXiv"
       },
       {
-        "title": "AIR-VLA: Vision-Language-Action Systems for Aerial Manipulation",
-        "authors": "Jianli Sun, Bin Tian, Qiyao Zhang",
-        "summary": "While Vision-Language-Action (VLA) models have achieved remarkable success in ground-based embodied intelligence, their application to Aerial Manipulation Systems (AMS) remains a largely unexplored fr...",
-        "link": "https://arxiv.org/abs/2601.21602v1",
-        "published": "2026-01-29T12:09:00Z",
+        "title": "mjlab: A Lightweight Framework for GPU-Accelerated Robot Learning",
+        "authors": "Kevin Zakka, Qiayuan Liao, Brent Yi",
+        "summary": "We present mjlab, a lightweight, open-source framework for robot learning that combines GPU-accelerated simulation with composable environments and minimal setup friction. mjlab adopts the manager-bas...",
+        "link": "https://arxiv.org/abs/2601.22074v1",
+        "published": "2026-01-29T18:11:26Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "PocketDP3: Efficient Pocket-Scale 3D Visuomotor Policy",
+        "authors": "Jinhao Zhang, Zhexuan Zhou, Huizhe Li",
+        "summary": "Recently, 3D vision-based diffusion policies have shown strong capability in learning complex robotic manipulation skills. However, a common architectural mismatch exists in these models: a tiny yet e...",
+        "link": "https://arxiv.org/abs/2601.22018v1",
+        "published": "2026-01-29T17:23:25Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "Causal World Modeling for Robot Control",
+        "authors": "Lin Li, Qihang Zhang, Yiming Luo",
+        "summary": "This work highlights that video world modeling, alongside vision-language pre-training, establishes a fresh and independent foundation for robot learning. Intuitively, video world models provide the a...",
+        "link": "https://arxiv.org/abs/2601.21998v1",
+        "published": "2026-01-29T17:07:43Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "Macro-Scale Electrostatic Origami Motor",
+        "authors": "Alex S. Miller, Leo McElroy, Jeffrey H. Lang",
+        "summary": "Foldable robots have been an active area of robotics research due to their high volume-to-mass ratio, easy packability, and shape adaptability. For locomotion, previously developed foldable robots hav...",
+        "link": "https://arxiv.org/abs/2601.21976v1",
+        "published": "2026-01-29T16:53:24Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "MoE-ACT: Improving Surgical Imitation Learning Policies through Supervised Mixture-of-Experts",
+        "authors": "Lorenzo Mazza, Ariel Rodriguez, Rayan Younis",
+        "summary": "Imitation learning has achieved remarkable success in robotic manipulation, yet its application to surgical robotics remains challenging due to data scarcity, constrained workspaces, and the need for ...",
+        "link": "https://arxiv.org/abs/2601.21971v1",
+        "published": "2026-01-29T16:50:14Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "Information Filtering via Variational Regularization for Robot Manipulation",
+        "authors": "Jinhao Zhang, Wenlong Xia, Yaojia Wang",
+        "summary": "Diffusion-based visuomotor policies built on 3D visual representations have achieved strong performance in learning complex robotic skills. However, most existing methods employ an oversized denoising...",
+        "link": "https://arxiv.org/abs/2601.21926v1",
+        "published": "2026-01-29T16:17:42Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "Multi-Modular MANTA-RAY: A Modular Soft Surface Platform for Distributed Multi-Object Manipulation",
+        "authors": "Pratik Ingle, Jørn Lambertsen, Kasper Støy",
+        "summary": "Manipulation surfaces control objects by actively deforming their shape rather than directly grasping them. While dense actuator arrays can generate complex deformations, they also introduce high degr...",
+        "link": "https://arxiv.org/abs/2601.21884v1",
+        "published": "2026-01-29T15:46:50Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "LLM-Driven Scenario-Aware Planning for Autonomous Driving",
+        "authors": "He Li, Zhaowei Chen, Rui Gao",
+        "summary": "Hybrid planner switching framework (HPSF) for autonomous driving needs to reconcile high-speed driving efficiency with safe maneuvering in dense traffic. Existing HPSF methods often fail to make relia...",
+        "link": "https://arxiv.org/abs/2601.21876v1",
+        "published": "2026-01-29T15:42:13Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "GAZELOAD A Multimodal Eye-Tracking Dataset for Mental Workload in Industrial Human-Robot Collaboration",
+        "authors": "Bsher Karbouj, Baha Eddin Gaaloul, Jorg Kruger",
+        "summary": "This article describes GAZELOAD, a multimodal dataset for mental workload estimation in industrial human-robot collaboration. The data were collected in a laboratory assembly testbed where 26 particip...",
+        "link": "https://arxiv.org/abs/2601.21829v1",
+        "published": "2026-01-29T15:12:58Z",
         "category": "paper",
         "source": "arXiv"
       },
@@ -31,11 +103,11 @@
         "source": "arXiv"
       },
       {
-        "title": "Nimbus: A Unified Embodied Synthetic Data Generation Framework",
-        "authors": "Zeyu He, Yuchang Zhang, Yuanzhen Zhou",
-        "summary": "Scaling data volume and diversity is critical for generalizing embodied intelligence. While synthetic data generation offers a scalable alternative to expensive physical data acquisition, existing pip...",
-        "link": "https://arxiv.org/abs/2601.21449v1",
-        "published": "2026-01-29T09:27:31Z",
+        "title": "Modeling Endogenous Logic: Causal Neuro-Symbolic Reasoning Model for Explainable Multi-Behavior Recommendation",
+        "authors": "Yuzhe Chen, Jie Cao, Youquan Wang",
+        "summary": "Existing multi-behavior recommendations tend to prioritize performance at the expense of explainability, while current explainable methods suffer from limited generalizability due to their reliance on...",
+        "link": "https://arxiv.org/abs/2601.21335v1",
+        "published": "2026-01-29T06:51:54Z",
         "category": "paper",
         "source": "arXiv"
       },
@@ -65,117 +137,81 @@
         "published": "2026-01-28T18:34:25Z",
         "category": "paper",
         "source": "arXiv"
-      },
-      {
-        "title": "Compression Tells Intelligence: Visual Coding, Visual Token Technology, and the Unification",
-        "authors": "Xin Jin, Jinming Liu, Yuntao Wei",
-        "summary": "\"Compression Tells Intelligence\", is supported by research in artificial intelligence, particularly concerning (multimodal) large language models (LLMs/MLLMs), where compression efficiency often corre...",
-        "link": "https://arxiv.org/abs/2601.20742v1",
-        "published": "2026-01-28T16:18:20Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "RF-MatID: Dataset and Benchmark for Radio Frequency Material Identification",
-        "authors": "Xinyan Chen, Qinchun Li, Ruiqin Ma",
-        "summary": "Accurate material identification plays a crucial role in embodied AI systems, enabling a wide range of applications. However, current vision-based solutions are limited by the inherent constraints of ...",
-        "link": "https://arxiv.org/abs/2601.20377v1",
-        "published": "2026-01-28T08:43:48Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "UniMGS: Unifying Mesh and 3D Gaussian Splatting with Single-Pass Rasterization and Proxy-Based Deformation",
-        "authors": "Zeyu Xiao, Mingyang Sun, Yimin Cong",
-        "summary": "Joint rendering and deformation of mesh and 3D Gaussian Splatting (3DGS) have significant value as both representa tions offer complementary advantages for graphics applica tions. However, due to diff...",
-        "link": "https://arxiv.org/abs/2601.19233v1",
-        "published": "2026-01-27T06:05:14Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "HumanoidTurk: Expanding VR Haptics with Humanoids for Driving Simulations",
-        "authors": "DaeHo Lee, Ryo Suzuki, Jin-Hyuk Hong",
-        "summary": "We explore how humanoid robots can be repurposed as haptic media, extending beyond their conventional role as social, assistive, collaborative agents. To illustrate this approach, we implemented Human...",
-        "link": "https://arxiv.org/abs/2601.18975v1",
-        "published": "2026-01-26T21:19:08Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Fauna Sprout: A lightweight, approachable, developer-ready humanoid robot",
-        "authors": "Fauna Robotics, :, Diego Aldarondo",
-        "summary": "Recent advances in learned control, large-scale simulation, and generative models have accelerated progress toward general-purpose robotic controllers, yet the field still lacks platforms suitable for...",
-        "link": "https://arxiv.org/abs/2601.18963v1",
-        "published": "2026-01-26T21:04:01Z",
-        "category": "paper",
-        "source": "arXiv"
       }
     ],
     "news": [
       {
-        "title": "Amazon Found 'High Volume' of Child Sex Abuse Material in AI Training Data",
-        "link": "https://www.bloomberg.com/news/features/2026-01-29/amazon-found-child-sex-abuse-in-ai-training-data",
+        "title": "AI-Agents: Friends or Foes?",
+        "link": "https://medium.com/@zarincheg/agents-friends-or-foes-499f5b912c3c",
         "source": "Hacker News",
         "category": "news",
-        "timestamp": "2026-01-30T16:37:13"
+        "timestamp": "2026-01-30T19:07:26"
       },
       {
-        "title": "Apple acquires Israeli audio AI startup Q.ai",
-        "link": "https://www.reuters.com/business/apple-acquires-audio-ai-startup-qai-2026-01-29/",
+        "title": "Show HN: PriceDB – Snap a receipt photo, let AI fill it in global price sharing",
+        "link": "https://what-i-paid.lovable.app/",
         "source": "Hacker News",
         "category": "news",
-        "timestamp": "2026-01-30T16:34:14"
+        "timestamp": "2026-01-30T18:57:58"
       },
       {
-        "title": "Show HN: We analyzed AI tool launches – here's why GTM breaks",
-        "link": "https://news.ycombinator.com/item?id=46821933",
+        "title": "Ask HN: Brave Search API forbids use with AI agents (openclaw, moltbot?)",
+        "link": "https://news.ycombinator.com/item?id=46822822",
         "source": "Hacker News",
         "category": "news",
-        "timestamp": "2026-01-30T16:33:23"
+        "timestamp": "2026-01-30T18:42:47"
       },
       {
-        "title": "Taiwan's GDP in 2025 Grew at Fastest Pace Since 2010 (+8.63%)",
-        "link": "https://www.wsj.com/economy/taiwans-economy-grew-at-fastest-pace-in-15-years-fcf4f0d2",
+        "title": "Ask HN: AI tools for learning and spaced repetition",
+        "link": "https://news.ycombinator.com/item?id=46822786",
         "source": "Hacker News",
         "category": "news",
-        "timestamp": "2026-01-30T16:33:13"
+        "timestamp": "2026-01-30T18:38:00"
       },
       {
-        "title": "Beyond the click: How brands can influence visibility in AI-generated answers",
-        "link": "https://thenextweb.com/news/beyond-the-click-influence-visibility",
+        "title": "Still waiting for GTA 6? Google Genie 3 says: just prompt it",
+        "link": "https://twitter.com/povssam/status/2017089259451154597",
         "source": "Hacker News",
         "category": "news",
-        "timestamp": "2026-01-30T16:29:54"
+        "timestamp": "2026-01-30T18:32:14"
+      },
+      {
+        "title": "Show HN: AI Mailbox – An CLI inbox for your agent, no questions asked",
+        "link": "https://github.com/ted2048-maker/aimailbox",
+        "source": "Hacker News",
+        "category": "news",
+        "timestamp": "2026-01-30T18:29:59"
+      },
+      {
+        "title": "Ask HN: What AI features looked smart early but hurt retention later?",
+        "link": "https://news.ycombinator.com/item?id=46822695",
+        "source": "Hacker News",
+        "category": "news",
+        "timestamp": "2026-01-30T18:23:31"
+      },
+      {
+        "title": "Tesla's Robotaxi data confirms crash rate 3x worse than humans even with monitor",
+        "link": "https://electrek.co/2026/01/29/teslas-own-robotaxi-data-confirms-crash-rate-3x-worse-than-humans-even-with-monitor/",
+        "source": "Hacker News",
+        "category": "news",
+        "timestamp": "2026-01-30T18:14:31"
+      },
+      {
+        "title": "We need to understand what AI is doing",
+        "link": "https://news.ycombinator.com/item?id=46822611",
+        "source": "Hacker News",
+        "category": "news",
+        "timestamp": "2026-01-30T18:11:10"
+      },
+      {
+        "title": "The era of GenAI started. New short essay",
+        "link": "http://codrutapoenaru.blogspot.com/2026/01/the-era-of-genai-started_29.html",
+        "source": "Hacker News",
+        "category": "news",
+        "timestamp": "2026-01-30T17:56:03"
       }
     ],
-    "funding": [
-      {
-        "title": "Physical Intelligence closes massive $600M Series B",
-        "description": "Led by Capital G (Alphabet), valuation reaches $5.6B. Marks largest robotics AI funding round.",
-        "link": "#",
-        "category": "funding",
-        "source": "TechCrunch",
-        "timestamp": "2026-01-30T14:46:09.854516"
-      },
-      {
-        "title": "中国银河通用机器人完成3亿美元融资",
-        "description": "宁德时代、中国移动、美团战投联合领投，专注工业场景的灵巧操作技术",
-        "link": "#",
-        "category": "funding",
-        "source": "36氪",
-        "timestamp": "2026-01-30T04:46:09.854584"
-      }
-    ],
-    "products": [
-      {
-        "title": "Example: Recent Product Update",
-        "description": "This is a placeholder for recent product updates. Real data will be scraped.",
-        "link": "#",
-        "category": "product",
-        "source": "Demo",
-        "timestamp": "2026-01-30T14:46:09.854516"
-      }
-    ]
+    "funding": [],
+    "products": []
   }
 }

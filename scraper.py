@@ -4,16 +4,23 @@ from datetime import datetime, timedelta
 import json
 from typing import List, Dict
 import time
+import re
 
 class EmbodiedAIScraper:
     """具身智能信息爬虫"""
 
     def __init__(self):
+        # 扩充关键词，更宽松的匹配
         self.keywords = [
-            'humanoid robot', 'embodied ai', 'embodied intelligence',
-            'figure ai', 'tesla optimus', 'physical intelligence',
-            'dexterous manipulation', 'robotic hand', 'biped robot',
-            '人形机器人', '具身智能', '灵巧手'
+            # 英文关键词
+            'robot', 'humanoid', 'embodied ai', 'embodied intelligence',
+            'figure ai', 'tesla optimus', 'optimus', 'physical intelligence',
+            'dexterous', 'manipulation', 'robotic hand', 'biped',
+            'unitree', 'boston dynamics', 'agility robotics', '1x',
+            # 中文关键词
+            '人形机器人', '具身智能', '灵巧手', '双足', '机器人',
+            '优必选', '宇树', '银河通用', '傅利叶', '智元',
+            '小米机器人', '阿里巴巴机器人', '腾讯机器人'
         ]
         self.results = {
             'papers': [],
@@ -26,34 +33,58 @@ class EmbodiedAIScraper:
         """抓取arXiv论文"""
         print("📄 Scraping arXiv papers...")
 
-        query = ' OR '.join([f'"{kw}"' for kw in self.keywords[:6]])
-        base_url = 'http://export.arxiv.org/api/query?'
+        # 放宽查询条件 - 分别搜索然后合并
+        queries = [
+            'cat:cs.RO AND (robot OR humanoid OR manipulation)',
+            'cat:cs.AI AND (embodied)',
+            'cat:cs.CV AND (robot)'
+        ]
 
-        params = {
-            'search_query': f'all:{query}',
-            'start': 0,
-            'max_results': 20,
-            'sortBy': 'submittedDate',
-            'sortOrder': 'descending'
-        }
+        total_papers = 0
+        seen_papers = set()
 
         try:
-            response = requests.get(base_url, params=params, timeout=10)
-            feed = feedparser.parse(response.content)
+            for query in queries:
+                base_url = 'http://export.arxiv.org/api/query?'
 
-            for entry in feed.entries[:12]:
-                paper = {
-                    'title': entry.title,
-                    'authors': ', '.join([author.name for author in entry.authors[:3]]),
-                    'summary': entry.summary[:200] + '...',
-                    'link': entry.link,
-                    'published': entry.published,
-                    'category': 'paper',
-                    'source': 'arXiv'
+                params = {
+                    'search_query': query,
+                    'start': 0,
+                    'max_results': 10,
+                    'sortBy': 'submittedDate',
+                    'sortOrder': 'descending'
                 }
-                self.results['papers'].append(paper)
 
-            print(f"  ✓ Found {len(self.results['papers'])} papers")
+                response = requests.get(base_url, params=params, timeout=10)
+                feed = feedparser.parse(response.content)
+
+                for entry in feed.entries:
+                    # 用ID去重
+                    paper_id = entry.id.split('/abs/')[-1].split('v')[0]
+                    if paper_id in seen_papers:
+                        continue
+                    seen_papers.add(paper_id)
+
+                    paper = {
+                        'title': entry.title,
+                        'authors': ', '.join([author.name for author in entry.authors[:3]]),
+                        'summary': entry.summary[:200] + '...',
+                        'link': entry.link,
+                        'published': entry.published,
+                        'category': 'paper',
+                        'source': 'arXiv'
+                    }
+                    self.results['papers'].append(paper)
+                    total_papers += 1
+
+                    if total_papers >= 15:
+                        break
+
+                time.sleep(1)
+                if total_papers >= 15:
+                    break
+
+            print(f"  ✓ Found {total_papers} papers")
         except Exception as e:
             print(f"  ✗ Error scraping arXiv: {e}")
 
@@ -62,14 +93,14 @@ class EmbodiedAIScraper:
         print("💬 Scraping Hacker News...")
 
         try:
-            # 获取最新故事
+            # 获取最新故事 - 扩大搜索范围
             url = 'https://hacker-news.firebaseio.com/v0/newstories.json'
             response = requests.get(url, timeout=10)
-            story_ids = response.json()[:100]
+            story_ids = response.json()[:200]  # 检查更多条目
 
             count = 0
             for story_id in story_ids:
-                if count >= 5:
+                if count >= 10:
                     break
 
                 story_url = f'https://hacker-news.firebaseio.com/v0/item/{story_id}.json'
@@ -78,22 +109,36 @@ class EmbodiedAIScraper:
 
                 if story and 'title' in story:
                     title_lower = story['title'].lower()
-                    if any(kw.lower() in title_lower for kw in ['robot', 'ai', 'tesla', 'optimus', 'figure']):
+                    # 更宽松的匹配
+                    if any(kw.lower() in title_lower for kw in ['robot', 'ai', 'tesla', 'optimus', 'human', 'machine']):
+                        # 判断类别
+                        category = 'news'
+                        if any(kw in title_lower for kw in ['fund', 'raise', 'investment', 'funding', 'million', 'billion']):
+                            category = 'funding'
+                        elif any(kw in title_lower for kw in ['product', 'launch', 'release', 'demo', 'unveiled']):
+                            category = 'product'
+
                         news_item = {
                             'title': story['title'],
                             'link': story.get('url', f"https://news.ycombinator.com/item?id={story_id}"),
                             'source': 'Hacker News',
-                            'category': 'news',
+                            'category': category,
                             'timestamp': datetime.fromtimestamp(story['time']).isoformat()
                         }
-                        self.results['news'].append(news_item)
+                        self.results[category + 's' if category != 'news' else 'news'].append(news_item)
                         count += 1
 
-                time.sleep(0.1)
+                time.sleep(0.05)  # 减少延迟
 
             print(f"  ✓ Found {count} relevant stories")
         except Exception as e:
             print(f"  ✗ Error scraping Hacker News: {e}")
+
+    def scrape_zhihu(self):
+        """尝试爬取知乎热门（简单版）"""
+        print("📝 Trying to scrape Chinese sources...")
+        # 知识星球和36氪需要更复杂的爬虫，暂时跳过
+        print("  ℹ️ Chinese sources need more complex scraping - skipping for now")
 
     def scrape_reddit(self):
         """抓取Reddit讨论"""
@@ -131,41 +176,8 @@ class EmbodiedAIScraper:
 
     def add_mock_data(self):
         """添加模拟数据（用于演示和测试）"""
-        print("🎭 Adding mock data for demonstration...")
-
-        # 融资信息 - 模拟为近期
-        recent_time = datetime.now() - timedelta(hours=2)
-
-        self.results['funding'].extend([
-            {
-                'title': 'Physical Intelligence closes massive $600M Series B',
-                'description': 'Led by Capital G (Alphabet), valuation reaches $5.6B. Marks largest robotics AI funding round.',
-                'link': '#',
-                'category': 'funding',
-                'source': 'TechCrunch',
-                'timestamp': recent_time.isoformat()
-            },
-            {
-                'title': '中国银河通用机器人完成3亿美元融资',
-                'description': '宁德时代、中国移动、美团战投联合领投，专注工业场景的灵巧操作技术',
-                'link': '#',
-                'category': 'funding',
-                'source': '36氪',
-                'timestamp': (datetime.now() - timedelta(hours=12)).isoformat()
-            }
-        ])
-
-        # 只添加最近的产品更新样例，不添加过时新闻
-        self.results['products'].extend([
-            {
-                'title': 'Example: Recent Product Update',
-                'description': 'This is a placeholder for recent product updates. Real data will be scraped.',
-                'link': '#',
-                'category': 'product',
-                'source': 'Demo',
-                'timestamp': recent_time.isoformat()
-            }
-        ])
+        print("🎭 Mock data disabled - showing only real scraped data...")
+        pass  # 不添加任何模拟数据
 
     def save_results(self, filename='data.json'):
         """保存抓取结果"""
@@ -190,6 +202,9 @@ class EmbodiedAIScraper:
         self.scrape_hackernews()
         time.sleep(1)
 
+        self.scrape_zhihu()
+        time.sleep(1)
+
         self.scrape_reddit()
         time.sleep(1)
 
@@ -202,6 +217,7 @@ class EmbodiedAIScraper:
         print(f"   News: {len(self.results['news'])}")
         print(f"   Funding: {len(self.results['funding'])}")
         print(f"   Products: {len(self.results['products'])}")
+        print(f"   Total: {sum(len(v) for v in self.results.values())} items")
 
 if __name__ == '__main__':
     scraper = EmbodiedAIScraper()
