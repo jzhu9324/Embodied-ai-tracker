@@ -2,15 +2,15 @@ name: Daily Update
 
 on:
   schedule:
-    # 每天北京时间00:00运行（UTC时间16:00）
     - cron: '0 16 * * *'
-  workflow_dispatch:  # 允许手动触发
+  workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
 
     steps:
       - name: Checkout code
@@ -37,12 +37,12 @@ jobs:
         run: |
           python generator.py
 
-      - name: Commit and push changes
-        run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
-          git add index.html data.json || echo "No changes to add"
-          git diff --staged --quiet || git commit -m "Update tracker data [skip ci]"
-          git push origin main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Update tracker data
+          title: '[Auto] Daily Tracker Update'
+          body: Automated daily update of embodied AI tracker data
+          branch: auto-update
+          delete-branch: true
