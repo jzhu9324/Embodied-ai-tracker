@@ -1,25 +1,51 @@
-name: Test Workflow
+name: Daily Update
 
 on:
-  workflow_dispatch:
+  schedule:
+    # 每天北京时间00:00运行（UTC时间16:00）
+    - cron: '0 16 * * *'
+  workflow_dispatch:  # 允许手动触发
 
 jobs:
-  test:
+  update:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
 
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Test write access
-        run: |
-          echo "Testing write access..."
-          echo "test" > test.txt
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
-          git add test.txt
-          git commit -m "Test write"
-          git push origin main || echo "Push failed"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
 
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run scraper
+        run: |
+          python scraper.py
+
+      - name: Generate HTML
+        run: |
+          python generator.py
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Update tracker data
+          title: '[Auto] Daily Tracker Update'
+          body: |
+            Automated daily update of embodied AI tracker data
+            📊 Items: ${{ steps.get-count.outputs.count || 'N/A' }}
+            🕐 Updated: ${{ github.event.head_commit.timestamp }}
+          branch: auto-update
+          delete-branch: true
+          draft: false
