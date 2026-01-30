@@ -40,8 +40,13 @@ python generator.py
 
 ## 访问地址
 
-https://jzhu9324.github.io/embodied-ai-tracker/
+### 主站（GitHub Pages）
+https://jzhu9324.github.io/Embodied-ai-tracker/
+
+### 原始HTML（确保最新）
+https://raw.githubusercontent.com/jzhu9324/Embodied-ai-tracker/main/index.html
 
 ---
 
 🤖 Tracking the future with retro style
+
