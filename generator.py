@@ -132,7 +132,13 @@ class HTMLGenerator:
         # 生成新闻项HTML
         news_html = ""
         for category, items in self.data['data'].items():
-            cat_name = 'product' if category == 'products' else category
+            # 统一转成单数形式匹配tab的data-category
+            cat_name = {
+                'papers': 'paper',
+                'products': 'product',
+                'news': 'news',
+                'funding': 'funding'
+            }.get(category, category)
             for item in items:
                 news_html += self.generate_news_item(item, cat_name)
 
