@@ -1,12 +1,53 @@
 {
-  "last_updated": "2026-01-30T19:26:05.353766",
-  "total_items": 66,
+  "last_updated": "2026-01-30T20:13:13.593398",
+  "total_items": 15,
+  "companies_tracked": [
+    "tesla",
+    "optimus",
+    "figure ai",
+    "1x",
+    "e-ve",
+    "unitree",
+    "agility robotics",
+    "boston dynamics",
+    "anybotics",
+    "physical intelligence",
+    "pi",
+    "sanctuary ai",
+    "fourier intelligence",
+    "agility robotics",
+    "优必选",
+    "ubtech",
+    "银河通用",
+    "傅利叶",
+    "智元",
+    "宇树",
+    "达闼"
+  ],
   "data": {
     "papers": [
       {
+        "title": "EmboCoach-Bench: Benchmarking AI Agents on Developing Embodied Robots",
+        "authors": "Zixing Lei, Genjia Liu, Yuanshuo Zhang",
+        "summary": "The field of Embodied AI is witnessing a rapid evolution toward general-purpose robotic systems, fueled by high-fidelity simulation and large-scale da...",
+        "link": "https://arxiv.org/abs/2601.21570v1",
+        "published": "2026-01-29T11:33:49Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
+        "title": "Towards Space-Based Environmentally-Adaptive Grasping",
+        "authors": "Leonidas Askianakis, Aleksandr Artemov",
+        "summary": "Robotic manipulation in unstructured environments requires reliable execution under diverse conditions, yet many state-of-the-art systems still strugg...",
+        "link": "https://arxiv.org/abs/2601.21394v1",
+        "published": "2026-01-29T08:31:03Z",
+        "category": "paper",
+        "source": "arXiv"
+      },
+      {
         "title": "DynamicVLA: A Vision-Language-Action Model for Dynamic Object Manipulation",
         "authors": "Haozhe Xie, Beichen Wen, Jiarui Zheng",
-        "summary": "Manipulating dynamic objects remains an open challenge for Vision-Language-Action (VLA) models, which, despite strong generalization in static manipulation, struggle in dynamic scenarios requiring rap...",
+        "summary": "Manipulating dynamic objects remains an open challenge for Vision-Language-Action (VLA) models, which, despite strong generalization in static manipul...",
         "link": "https://arxiv.org/abs/2601.22153v1",
         "published": "2026-01-29T18:59:51Z",
         "category": "paper",
@@ -15,52 +56,16 @@
       {
         "title": "mjlab: A Lightweight Framework for GPU-Accelerated Robot Learning",
         "authors": "Kevin Zakka, Qiayuan Liao, Brent Yi",
-        "summary": "We present mjlab, a lightweight, open-source framework for robot learning that combines GPU-accelerated simulation with composable environments and minimal setup friction. mjlab adopts the manager-bas...",
+        "summary": "We present mjlab, a lightweight, open-source framework for robot learning that combines GPU-accelerated simulation with composable environments and mi...",
         "link": "https://arxiv.org/abs/2601.22074v1",
         "published": "2026-01-29T18:11:26Z",
         "category": "paper",
         "source": "arXiv"
       },
       {
-        "title": "PocketDP3: Efficient Pocket-Scale 3D Visuomotor Policy",
-        "authors": "Jinhao Zhang, Zhexuan Zhou, Huizhe Li",
-        "summary": "Recently, 3D vision-based diffusion policies have shown strong capability in learning complex robotic manipulation skills. However, a common architectural mismatch exists in these models: a tiny yet e...",
-        "link": "https://arxiv.org/abs/2601.22018v1",
-        "published": "2026-01-29T17:23:25Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Causal World Modeling for Robot Control",
-        "authors": "Lin Li, Qihang Zhang, Yiming Luo",
-        "summary": "This work highlights that video world modeling, alongside vision-language pre-training, establishes a fresh and independent foundation for robot learning. Intuitively, video world models provide the a...",
-        "link": "https://arxiv.org/abs/2601.21998v1",
-        "published": "2026-01-29T17:07:43Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Macro-Scale Electrostatic Origami Motor",
-        "authors": "Alex S. Miller, Leo McElroy, Jeffrey H. Lang",
-        "summary": "Foldable robots have been an active area of robotics research due to their high volume-to-mass ratio, easy packability, and shape adaptability. For locomotion, previously developed foldable robots hav...",
-        "link": "https://arxiv.org/abs/2601.21976v1",
-        "published": "2026-01-29T16:53:24Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "MoE-ACT: Improving Surgical Imitation Learning Policies through Supervised Mixture-of-Experts",
-        "authors": "Lorenzo Mazza, Ariel Rodriguez, Rayan Younis",
-        "summary": "Imitation learning has achieved remarkable success in robotic manipulation, yet its application to surgical robotics remains challenging due to data scarcity, constrained workspaces, and the need for ...",
-        "link": "https://arxiv.org/abs/2601.21971v1",
-        "published": "2026-01-29T16:50:14Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
         "title": "Information Filtering via Variational Regularization for Robot Manipulation",
         "authors": "Jinhao Zhang, Wenlong Xia, Yaojia Wang",
-        "summary": "Diffusion-based visuomotor policies built on 3D visual representations have achieved strong performance in learning complex robotic skills. However, most existing methods employ an oversized denoising...",
+        "summary": "Diffusion-based visuomotor policies built on 3D visual representations have achieved strong performance in learning complex robotic skills. However, m...",
         "link": "https://arxiv.org/abs/2601.21926v1",
         "published": "2026-01-29T16:17:42Z",
         "category": "paper",
@@ -69,34 +74,16 @@
       {
         "title": "Multi-Modular MANTA-RAY: A Modular Soft Surface Platform for Distributed Multi-Object Manipulation",
         "authors": "Pratik Ingle, Jørn Lambertsen, Kasper Støy",
-        "summary": "Manipulation surfaces control objects by actively deforming their shape rather than directly grasping them. While dense actuator arrays can generate complex deformations, they also introduce high degr...",
+        "summary": "Manipulation surfaces control objects by actively deforming their shape rather than directly grasping them. While dense actuator arrays can generate c...",
         "link": "https://arxiv.org/abs/2601.21884v1",
         "published": "2026-01-29T15:46:50Z",
         "category": "paper",
         "source": "arXiv"
       },
       {
-        "title": "LLM-Driven Scenario-Aware Planning for Autonomous Driving",
-        "authors": "He Li, Zhaowei Chen, Rui Gao",
-        "summary": "Hybrid planner switching framework (HPSF) for autonomous driving needs to reconcile high-speed driving efficiency with safe maneuvering in dense traffic. Existing HPSF methods often fail to make relia...",
-        "link": "https://arxiv.org/abs/2601.21876v1",
-        "published": "2026-01-29T15:42:13Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "GAZELOAD A Multimodal Eye-Tracking Dataset for Mental Workload in Industrial Human-Robot Collaboration",
-        "authors": "Bsher Karbouj, Baha Eddin Gaaloul, Jorg Kruger",
-        "summary": "This article describes GAZELOAD, a multimodal dataset for mental workload estimation in industrial human-robot collaboration. The data were collected in a laboratory assembly testbed where 26 particip...",
-        "link": "https://arxiv.org/abs/2601.21829v1",
-        "published": "2026-01-29T15:12:58Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
         "title": "Disentangling perception and reasoning for improving data efficiency in learning cloth manipulation without demonstrations",
         "authors": "Donatien Delehelle, Fei Chen, Darwin Caldwell",
-        "summary": "Cloth manipulation is a ubiquitous task in everyday life, but it remains an open challenge for robotics. The difficulties in developing cloth manipulation policies are attributed to the high-dimension...",
+        "summary": "Cloth manipulation is a ubiquitous task in everyday life, but it remains an open challenge for robotics. The difficulties in developing cloth manipula...",
         "link": "https://arxiv.org/abs/2601.21713v1",
         "published": "2026-01-29T13:41:35Z",
         "category": "paper",
@@ -105,7 +92,7 @@
       {
         "title": "CoFreeVLA: Collision-Free Dual-Arm Manipulation via Vision-Language-Action Model and Risk Estimation",
         "authors": "Xuanran Zhai, Binkai Ou, Yemin Wang",
-        "summary": "Vision Language Action (VLA) models enable instruction following manipulation, yet dualarm deployment remains unsafe due to under modeled selfcollisions between arms and grasped objects. We introduce ...",
+        "summary": "Vision Language Action (VLA) models enable instruction following manipulation, yet dualarm deployment remains unsafe due to under modeled selfcollisio...",
         "link": "https://arxiv.org/abs/2601.21712v1",
         "published": "2026-01-29T13:40:46Z",
         "category": "paper",
@@ -114,7 +101,7 @@
       {
         "title": "From Instruction to Event: Sound-Triggered Mobile Manipulation",
         "authors": "Hao Ju, Shaofei Huang, Hongyu Li",
-        "summary": "Current mobile manipulation research predominantly follows an instruction-driven paradigm, where agents rely on predefined textual commands to execute tasks. However, this setting confines agents to a...",
+        "summary": "Current mobile manipulation research predominantly follows an instruction-driven paradigm, where agents rely on predefined textual commands to execute...",
         "link": "https://arxiv.org/abs/2601.21667v1",
         "published": "2026-01-29T13:02:10Z",
         "category": "paper",
@@ -123,451 +110,48 @@
       {
         "title": "AIR-VLA: Vision-Language-Action Systems for Aerial Manipulation",
         "authors": "Jianli Sun, Bin Tian, Qiyao Zhang",
-        "summary": "While Vision-Language-Action (VLA) models have achieved remarkable success in ground-based embodied intelligence, their application to Aerial Manipulation Systems (AMS) remains a largely unexplored fr...",
+        "summary": "While Vision-Language-Action (VLA) models have achieved remarkable success in ground-based embodied intelligence, their application to Aerial Manipula...",
         "link": "https://arxiv.org/abs/2601.21602v1",
         "published": "2026-01-29T12:09:00Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "EmboCoach-Bench: Benchmarking AI Agents on Developing Embodied Robots",
-        "authors": "Zixing Lei, Genjia Liu, Yuanshuo Zhang",
-        "summary": "The field of Embodied AI is witnessing a rapid evolution toward general-purpose robotic systems, fueled by high-fidelity simulation and large-scale data collection. However, this scaling capability re...",
-        "link": "https://arxiv.org/abs/2601.21570v1",
-        "published": "2026-01-29T11:33:49Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Hybrid Linear Attention Done Right: Efficient Distillation and Effective Architectures for Extremely Long Contexts",
-        "authors": "Yingfa Chen, Zhen Leng Thai, Zihan Zhou",
-        "summary": "Hybrid Transformer architectures, which combine softmax attention blocks and recurrent neural networks (RNNs), have shown a desirable performance-throughput tradeoff for long-context modeling, but the...",
-        "link": "https://arxiv.org/abs/2601.22156v1",
-        "published": "2026-01-29T18:59:53Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Exploring Reasoning Reward Model for Agents",
-        "authors": "Kaixuan Fan, Kaituo Feng, Manyuan Zhang",
-        "summary": "Agentic Reinforcement Learning (Agentic RL) has achieved notable success in enabling agents to perform complex reasoning and tool use. However, most methods still relies on sparse outcome-based reward...",
-        "link": "https://arxiv.org/abs/2601.22154v1",
-        "published": "2026-01-29T18:59:52Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "DynaWeb: Model-Based Reinforcement Learning of Web Agents",
-        "authors": "Hang Ding, Peidong Liu, Junqiao Wang",
-        "summary": "The development of autonomous web agents, powered by Large Language Models (LLMs) and reinforcement learning (RL), represents a significant step towards general-purpose AI assistants. However, trainin...",
-        "link": "https://arxiv.org/abs/2601.22149v1",
-        "published": "2026-01-29T18:59:07Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Routing the Lottery: Adaptive Subnetworks for Heterogeneous Data",
-        "authors": "Grzegorz Stefanski, Alberto Presta, Michal Byra",
-        "summary": "In pruning, the Lottery Ticket Hypothesis posits that large networks contain sparse subnetworks, or winning tickets, that can be trained in isolation to match the performance of their dense counterpar...",
-        "link": "https://arxiv.org/abs/2601.22141v1",
-        "published": "2026-01-29T18:56:41Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "PRISM: Distribution-free Adaptive Computation of Matrix Functions for Accelerating Neural Network Training",
-        "authors": "Shenghao Yang, Zhichao Wang, Oleg Balabanov",
-        "summary": "Matrix functions such as square root, inverse roots, and orthogonalization play a central role in preconditioned gradient methods for neural network training. This has motivated the development of ite...",
-        "link": "https://arxiv.org/abs/2601.22137v1",
-        "published": "2026-01-29T18:55:46Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "StepShield: When, Not Whether to Intervene on Rogue Agents",
-        "authors": "Gloria Felicia, Michael Eniolade, Jinfeng He",
-        "summary": "Existing agent safety benchmarks report binary accuracy, conflating early intervention with post-mortem analysis. A detector that flags a violation at step 8 enables intervention; one that reports it ...",
-        "link": "https://arxiv.org/abs/2601.22136v1",
-        "published": "2026-01-29T18:55:46Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "World of Workflows: a Benchmark for Bringing World Models to Enterprise Systems",
-        "authors": "Lakshya Gupta, Litao Li, Yizhe Liu",
-        "summary": "Frontier large language models (LLMs) excel as autonomous agents in many domains, yet they remain untested in complex enterprise systems where hidden workflows create cascading effects across intercon...",
-        "link": "https://arxiv.org/abs/2601.22130v1",
-        "published": "2026-01-29T18:51:54Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "SWE-Replay: Efficient Test-Time Scaling for Software Engineering Agents",
-        "authors": "Yifeng Ding, Lingming Zhang",
-        "summary": "Test-time scaling has been widely adopted to enhance the capabilities of Large Language Model (LLM) agents in software engineering (SWE) tasks. However, the standard approach of repeatedly sampling tr...",
-        "link": "https://arxiv.org/abs/2601.22129v1",
-        "published": "2026-01-29T18:50:29Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "The Patient is not a Moving Document: A World Model Training Paradigm for Longitudinal EHR",
-        "authors": "Irsyad Adam, Zekai Chen, David Laprade",
-        "summary": "Large language models (LLMs) trained with next-word-prediction have achieved success as clinical foundation models. Representations from these language backbones yield strong linear probe performance ...",
-        "link": "https://arxiv.org/abs/2601.22128v1",
-        "published": "2026-01-29T18:49:37Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Alpha Discovery via Grammar-Guided Learning and Search",
-        "authors": "Han Yang, Dong Hao, Zhuohan Wang",
-        "summary": "Automatically discovering formulaic alpha factors is a central problem in quantitative finance. Existing methods often ignore syntactic and semantic constraints, relying on exhaustive search over unst...",
-        "link": "https://arxiv.org/abs/2601.22119v1",
-        "published": "2026-01-29T18:46:15Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "SINA: A Circuit Schematic Image-to-Netlist Generator Using Artificial Intelligence",
-        "authors": "Saoud Aldowaish, Yashwanth Karumanchi, Kai-Chen Chiang",
-        "summary": "Current methods for converting circuit schematic images into machine-readable netlists struggle with component recognition and connectivity inference. In this paper, we present SINA, an open-source, f...",
-        "link": "https://arxiv.org/abs/2601.22114v1",
-        "published": "2026-01-29T18:41:52Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Value-Based Pre-Training with Downstream Feedback",
-        "authors": "Shuqi Ke, Giulia Fanti",
-        "summary": "Can a small amount of verified goal information steer the expensive self-supervised pretraining of foundation models? Standard pretraining optimizes a fixed proxy objective (e.g., next-token predictio...",
-        "link": "https://arxiv.org/abs/2601.22108v1",
-        "published": "2026-01-29T18:38:09Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "ECO: Quantized Training without Full-Precision Master Weights",
-        "authors": "Mahdi Nikdan, Amir Zandieh, Dan Alistarh",
-        "summary": "Quantization has significantly improved the compute and memory efficiency of Large Language Model (LLM) training. However, existing approaches still rely on accumulating their updates in high-precisio...",
-        "link": "https://arxiv.org/abs/2601.22101v1",
-        "published": "2026-01-29T18:35:01Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Investigating Associational Biases in Inter-Model Communication of Large Generative Models",
-        "authors": "Fethiye Irmak Dogan, Yuval Weiss, Kajal Patel",
-        "summary": "Social bias in generative AI can manifest not only as performance disparities but also as associational bias, whereby models learn and reproduce stereotypical associations between concepts and demogra...",
-        "link": "https://arxiv.org/abs/2601.22093v1",
-        "published": "2026-01-29T18:29:55Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Latent Adversarial Regularization for Offline Preference Optimization",
-        "authors": "Enyi Jiang, Yibo Jacky Zhang, Yinglun Xu",
-        "summary": "Learning from human feedback typically relies on preference optimization that constrains policy updates through token-level regularization. However, preference optimization for language models is part...",
-        "link": "https://arxiv.org/abs/2601.22083v1",
-        "published": "2026-01-29T18:21:57Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Do VLMs Perceive or Recall? Probing Visual Perception vs. Memory with Classic Visual Illusions",
-        "authors": "Xiaoxiao Sun, Mingyang Li, Kun yuan",
-        "summary": "Large Vision-Language Models (VLMs) often answer classic visual illusions \"correctly\" on original images, yet persist with the same responses when illusion factors are inverted, even though the visual...",
-        "link": "https://arxiv.org/abs/2601.22150v1",
-        "published": "2026-01-29T18:59:24Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "JUST-DUB-IT: Video Dubbing via Joint Audio-Visual Diffusion",
-        "authors": "Anthony Chen, Naomi Ken Korem, Tavi Halperin",
-        "summary": "Audio-Visual Foundation Models, which are pretrained to jointly generate sound and visual content, have recently shown an unprecedented ability to model multi-modal generation and editing, opening new...",
-        "link": "https://arxiv.org/abs/2601.22143v1",
-        "published": "2026-01-29T18:57:13Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "EditYourself: Audio-Driven Generation and Manipulation of Talking Head Videos with Diffusion Transformers",
-        "authors": "John Flynn, Wolfgang Paier, Dimitar Dinev",
-        "summary": "Current generative video models excel at producing novel content from text and image prompts, but leave a critical gap in editing existing pre-recorded videos, where minor alterations to the spoken sc...",
-        "link": "https://arxiv.org/abs/2601.22127v1",
-        "published": "2026-01-29T18:49:27Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Creative Image Generation with Diffusion Model",
-        "authors": "Kunpeng Song, Ahmed Elgammal",
-        "summary": "Creative image generation has emerged as a compelling area of research, driven by the need to produce novel and high-quality images that expand the boundaries of imagination. In this work, we propose ...",
-        "link": "https://arxiv.org/abs/2601.22125v1",
-        "published": "2026-01-29T18:48:48Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Vision-DeepResearch: Incentivizing DeepResearch Capability in Multimodal Large Language Models",
-        "authors": "Wenxuan Huang, Yu Zeng, Qiuchen Wang",
-        "summary": "Multimodal large language models (MLLMs) have achieved remarkable success across a broad range of vision tasks. However, constrained by the capacity of their internal world knowledge, prior work has p...",
-        "link": "https://arxiv.org/abs/2601.22060v1",
-        "published": "2026-01-29T17:58:40Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Unsupervised Decomposition and Recombination with Discriminator-Driven Diffusion Models",
-        "authors": "Archer Wang, Emile Anand, Yilun Du",
-        "summary": "Decomposing complex data into factorized representations can reveal reusable components and enable synthesizing new samples via component recombination. We investigate this in the context of diffusion...",
-        "link": "https://arxiv.org/abs/2601.22057v1",
-        "published": "2026-01-29T17:57:06Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "MetricAnything: Scaling Metric Depth Pretraining with Noisy Heterogeneous Sources",
-        "authors": "Baorui Ma, Jiahui Yang, Donglin Di",
-        "summary": "Scaling has powered recent advances in vision foundation models, yet extending this paradigm to metric depth estimation remains challenging due to heterogeneous sensor noise, camera-dependent biases, ...",
-        "link": "https://arxiv.org/abs/2601.22054v1",
-        "published": "2026-01-29T17:52:41Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Understanding Multimodal Complementarity for Single-Frame Action Anticipation",
-        "authors": "Manuel Benavent-Lledo, Konstantinos Bacharidis, Konstantinos Papoutsakis",
-        "summary": "Human action anticipation is commonly treated as a video understanding problem, implicitly assuming that dense temporal information is required to reason about future actions. In this work, we challen...",
-        "link": "https://arxiv.org/abs/2601.22039v1",
-        "published": "2026-01-29T17:44:23Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Hybrid Foveated Path Tracing with Peripheral Gaussians for Immersive Anatomy",
-        "authors": "Constantin Kleinbeck, Luisa Theelke, Hannah Schieber",
-        "summary": "Volumetric medical imaging offers great potential for understanding complex pathologies. Yet, traditional 2D slices provide little support for interpreting spatial relationships, forcing users to ment...",
-        "link": "https://arxiv.org/abs/2601.22026v1",
-        "published": "2026-01-29T17:33:14Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Visual-Guided Key-Token Regularization for Multimodal Large Language Model Unlearning",
-        "authors": "Chengyi Cai, Zesheng Ye, Peike Li",
-        "summary": "Unlearning in Multimodal Large Language Models (MLLMs) prevents the model from revealing private information when queried about target images. Existing MLLM unlearning methods largely adopt approaches...",
-        "link": "https://arxiv.org/abs/2601.22020v1",
-        "published": "2026-01-29T17:26:54Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Deep Models, Shallow Alignment: Uncovering the Granularity Mismatch in Neural Decoding",
-        "authors": "Yang Du, Siyuan Dai, Yonghao Song",
-        "summary": "Neural visual decoding is a central problem in brain computer interface research, aiming to reconstruct human visual perception and to elucidate the structure of neural representations. However, exist...",
-        "link": "https://arxiv.org/abs/2601.21948v1",
-        "published": "2026-01-29T16:30:32Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Just Noticeable Difference Modeling for Deep Visual Features",
-        "authors": "Rui Zhao, Wenrui Li, Lin Zhu",
-        "summary": "Deep visual features are increasingly used as the interface in vision systems, motivating the need to describe feature characteristics and control feature quality for machine perception. Just noticeab...",
-        "link": "https://arxiv.org/abs/2601.21933v1",
-        "published": "2026-01-29T16:22:31Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "VideoAesBench: Benchmarking the Video Aesthetics Perception Capabilities of Large Multimodal Models",
-        "authors": "Yunhao Li, Sijing Wu, Zhilin Gao",
-        "summary": "Large multimodal models (LMMs) have demonstrated outstanding capabilities in various visual perception tasks, which has in turn made the evaluation of LMMs significant. However, the capability of vide...",
-        "link": "https://arxiv.org/abs/2601.21915v1",
-        "published": "2026-01-29T16:06:30Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Discovering Hidden Gems in Model Repositories",
-        "authors": "Jonathan Kahana, Eliahu Horwitz, Yedid Hoshen",
-        "summary": "Public repositories host millions of fine-tuned models, yet community usage remains disproportionately concentrated on a small number of foundation checkpoints. We investigate whether this concentrati...",
-        "link": "https://arxiv.org/abs/2601.22157v1",
-        "published": "2026-01-29T18:59:55Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Late Breaking Results: Conversion of Neural Networks into Logic Flows for Edge Computing",
-        "authors": "Daniel Stein, Shaoyi Huang, Rolf Drechsler",
-        "summary": "Neural networks have been successfully applied in various resource-constrained edge devices, where usually central processing units (CPUs) instead of graphics processing units exist due to limited pow...",
-        "link": "https://arxiv.org/abs/2601.22151v1",
-        "published": "2026-01-29T18:59:50Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "FineInstructions: Scaling Synthetic Instructions to Pre-Training Scale",
-        "authors": "Ajay Patel, Colin Raffel, Chris Callison-Burch",
-        "summary": "Due to limited supervised training data, large language models (LLMs) are typically pre-trained via a self-supervised \"predict the next word\" objective on a vast amount of unstructured text data. To m...",
-        "link": "https://arxiv.org/abs/2601.22146v1",
-        "published": "2026-01-29T18:58:47Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Pay for Hints, Not Answers: LLM Shepherding for Cost-Efficient Inference",
-        "authors": "Ziming Dong, Hardik Sharma, Evan O'Toole",
-        "summary": "Large Language Models (LLMs) deliver state-of-the-art performance on complex reasoning tasks, but their inference costs limit deployment at scale. Small Language Models (SLMs) offer dramatic cost savi...",
-        "link": "https://arxiv.org/abs/2601.22132v1",
-        "published": "2026-01-29T18:52:54Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "SMOG: Scalable Meta-Learning for Multi-Objective Bayesian Optimization",
-        "authors": "Leonard Papenmeier, Petru Tighineanu",
-        "summary": "Multi-objective optimization aims to solve problems with competing objectives, often with only black-box access to a problem and a limited budget of measurements. In many applications, historical data...",
-        "link": "https://arxiv.org/abs/2601.22131v1",
-        "published": "2026-01-29T18:51:58Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Learning Hamiltonian Flow Maps: Mean Flow Consistency for Large-Timestep Molecular Dynamics",
-        "authors": "Winfried Ripken, Michael Plainer, Gregor Lied",
-        "summary": "Simulating the long-time evolution of Hamiltonian systems is limited by the small timesteps required for stable numerical integration. To overcome this constraint, we introduce a framework to learn Ha...",
-        "link": "https://arxiv.org/abs/2601.22123v1",
-        "published": "2026-01-29T18:47:46Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Diverse Approaches to Optimal Execution Schedule Generation",
-        "authors": "Robert de Witt, Mikko S. Pakkanen",
-        "summary": "We present the first application of MAP-Elites, a quality-diversity algorithm, to trade execution. Rather than searching for a single optimal policy, MAP-Elites generates a diverse portfolio of regime...",
-        "link": "https://arxiv.org/abs/2601.22113v1",
-        "published": "2026-01-29T18:41:52Z",
-        "category": "paper",
-        "source": "arXiv"
-      },
-      {
-        "title": "Physics Informed Reconstruction of Four-Dimensional Atmospheric Wind Fields Using Multi-UAS Swarm Observations in a Synthetic Turbulent Environment",
-        "authors": "Abdullah Tasim, Wei Sun",
-        "summary": "Accurate reconstruction of atmospheric wind fields is essential for applications such as weather forecasting, hazard prediction, and wind energy assessment, yet conventional instruments leave spatio-t...",
-        "link": "https://arxiv.org/abs/2601.22111v1",
-        "published": "2026-01-29T18:40:32Z",
         "category": "paper",
         "source": "arXiv"
       }
     ],
     "news": [
       {
-        "title": "Wall Street Braces for AI Bond Binge as Complacency Fears Mount",
-        "link": "https://www.bloomberg.com/news/articles/2026-01-29/wall-street-braces-for-ai-bond-binge-as-complacency-fears-mount",
-        "source": "Hacker News",
+        "title": "Guys, I don’t think Tim Cook knows how to monetize AI",
+        "link": "https://techcrunch.com/2026/01/29/guys-i-dont-think-tim-cook-knows-how-to-monetize-ai/",
+        "source": "TechCrunch",
         "category": "news",
-        "timestamp": "2026-01-30T19:18:55"
+        "timestamp": "Thu, 29 Jan 2026 23:51:17 +0000"
       },
       {
-        "title": "Chat Memo – Auto-Save AI Chats from ChatGPT, Gemini, Claude +",
-        "link": "https://chromewebstore.google.com/detail/chat-memo-auto-save-ai-ch/memnnheiikbfdcobfkghhfihnegkfici",
-        "source": "Hacker News",
+        "title": "Elon Musk’s SpaceX, Tesla, and xAI in talks to merge, according to reports",
+        "link": "https://techcrunch.com/2026/01/29/elon-musk-spacex-tesla-xai-merger-talks-ipo-reuters/",
+        "source": "TechCrunch",
         "category": "news",
-        "timestamp": "2026-01-30T19:12:34"
+        "timestamp": "Thu, 29 Jan 2026 22:47:42 +0000"
       },
       {
-        "title": "AI-Agents: Friends or Foes?",
-        "link": "https://medium.com/@zarincheg/agents-friends-or-foes-499f5b912c3c",
-        "source": "Hacker News",
+        "title": "Satya Nadella insists people are using Microsoft’s Copilot AI a lot",
+        "link": "https://techcrunch.com/2026/01/29/satya-nadella-insists-people-are-using-microsofts-copilot-ai-a-lot/",
+        "source": "TechCrunch",
         "category": "news",
-        "timestamp": "2026-01-30T19:07:26"
+        "timestamp": "Thu, 29 Jan 2026 20:06:56 +0000"
       },
       {
-        "title": "Show HN: PriceDB – Snap a receipt photo, let AI fill it in global price sharing",
-        "link": "https://what-i-paid.lovable.app/",
-        "source": "Hacker News",
+        "title": "Music publishers sue Anthropic for $3B over ‘flagrant piracy’ of 20,000 works",
+        "link": "https://techcrunch.com/2026/01/29/music-publishers-sue-anthropic-for-3b-over-flagrant-piracy-of-20000-works/",
+        "source": "TechCrunch",
         "category": "news",
-        "timestamp": "2026-01-30T18:57:58"
+        "timestamp": "Thu, 29 Jan 2026 16:30:29 +0000"
       },
       {
-        "title": "Ask HN: Brave Search API forbids use with AI agents (openclaw, moltbot?)",
-        "link": "https://news.ycombinator.com/item?id=46822822",
-        "source": "Hacker News",
+        "title": "India is teaching Google how AI in education can scale",
+        "link": "https://techcrunch.com/2026/01/29/india-is-teaching-google-how-ai-in-education-can-scale/",
+        "source": "TechCrunch",
         "category": "news",
-        "timestamp": "2026-01-30T18:42:47"
-      },
-      {
-        "title": "Ask HN: AI tools for learning and spaced repetition",
-        "link": "https://news.ycombinator.com/item?id=46822786",
-        "source": "Hacker News",
-        "category": "news",
-        "timestamp": "2026-01-30T18:38:00"
-      },
-      {
-        "title": "Still waiting for GTA 6? Google Genie 3 says: just prompt it",
-        "link": "https://twitter.com/povssam/status/2017089259451154597",
-        "source": "Hacker News",
-        "category": "news",
-        "timestamp": "2026-01-30T18:32:14"
-      },
-      {
-        "title": "Show HN: AI Mailbox – An CLI inbox for your agent, no questions asked",
-        "link": "https://github.com/ted2048-maker/aimailbox",
-        "source": "Hacker News",
-        "category": "news",
-        "timestamp": "2026-01-30T18:29:59"
-      },
-      {
-        "title": "Ask HN: What AI features looked smart early but hurt retention later?",
-        "link": "https://news.ycombinator.com/item?id=46822695",
-        "source": "Hacker News",
-        "category": "news",
-        "timestamp": "2026-01-30T18:23:31"
-      },
-      {
-        "title": "Tesla's Robotaxi data confirms crash rate 3x worse than humans even with monitor",
-        "link": "https://electrek.co/2026/01/29/teslas-own-robotaxi-data-confirms-crash-rate-3x-worse-than-humans-even-with-monitor/",
-        "source": "Hacker News",
-        "category": "news",
-        "timestamp": "2026-01-30T18:14:31"
-      },
-      {
-        "title": "We need to understand what AI is doing",
-        "link": "https://news.ycombinator.com/item?id=46822611",
-        "source": "Hacker News",
-        "category": "news",
-        "timestamp": "2026-01-30T18:11:10"
-      },
-      {
-        "title": "The era of GenAI started. New short essay",
-        "link": "http://codrutapoenaru.blogspot.com/2026/01/the-era-of-genai-started_29.html",
-        "source": "Hacker News",
-        "category": "news",
-        "timestamp": "2026-01-30T17:56:03"
-      },
-      {
-        "title": "How the NoteGPT AI Essay Writer Transforms Your Academic Workflow",
-        "link": "https://notegpt.io/ai-essay-writer",
-        "source": "Hacker News",
-        "category": "news",
-        "timestamp": "2026-01-30T17:50:37"
-      },
-      {
-        "title": "Semantic Chaining: A New Image Jailbreak Attack",
-        "link": "https://neuraltrust.ai/blog/semantic-chaining",
-        "source": "Hacker News",
-        "category": "news",
-        "timestamp": "2026-01-30T17:39:20"
-      },
-      {
-        "title": "Show HN: Indx.sh – Directory of AI coding rules, MCP servers, and tool",
-        "link": "https://indx.sh",
-        "source": "Hacker News",
-        "category": "news",
-        "timestamp": "2026-01-30T17:37:54"
+        "timestamp": "Thu, 29 Jan 2026 15:29:31 +0000"
       }
     ],
     "funding": [],
