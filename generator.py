@@ -677,7 +677,7 @@ class HTMLGenerator:
 '''
         html_content += f'''
             <div class="digest-content">
-                📄 LAST UPDATE: {kwargs['last_updated']} | 🌐 TRACKING: {len(kwargs.get('mentioned_companies', [])) + len(kwargs.get('companies_tracked', [kwargs.get('total_items', 0)]))} key companies
+                📄 LAST UPDATE: {kwargs['last_updated']} | 🌐 TRACKING: {len(kwargs.get('companies_tracked', []))} key companies
             </div>
         </div>
 
