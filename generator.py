@@ -149,8 +149,34 @@ class HTMLGenerator:
         last_updated = datetime.fromisoformat(self.data['last_updated'])
         formatted_time = last_updated.strftime('%Y-%m-%d %H:%M:%S UTC')
 
-        # 生成摘要统计
-        stats_text = f"🤖 {counts['product']} company updates | 📄 {counts['paper']} new papers | 💰 {counts['funding']} funding deals | 🔥 {total_items} total items"
+        # 生成摘要统计和关键洞察
+        stats_text = f"🤖 {counts['paper']} papers | 💰 {counts['funding']} funding | 🔧 {counts['product']} product | 📰 {counts['news']} news | 🔥 {total_items} total"
+
+        # 提取关键公司提及
+        mentioned_companies = []
+        # 从数据中查找公司名称
+        companies = self.data.get('companies_tracked', KEY_COMPANIES if 'KEY_COMPANIES' in locals() else [])
+        for company in companies[:5]:  # 检查前5个
+            company_lower = str(company).lower()
+            company_count = 0
+            for cat in ['papers', 'news', 'funding', 'products']:
+                for item in self.data['data'].get(cat, []):
+                    if company_lower in str(item.get('title', '')).lower() or \
+                       company_lower in str(item.get('summary', '')).lower():
+                        company_count += 1
+            if company_count > 0:
+                mentioned_companies.append(f"{company} ({company_count})")
+
+        # 生成关键洞察
+        key_insight = ""
+        if counts['funding'] > 0:
+            key_insight = f"💰 Funding activity detected - {counts['funding']} investment deal(s)"
+        elif counts['paper'] > 0:
+            key_insight = f"📄 Strong research momentum - {counts['paper']} new papers on robotics & embodied AI"
+        elif counts['product'] > 0:
+            key_insight = f"🔧 Product updates - {counts['product']} new developments in humanoid robotics"
+        else:
+            key_insight = "📰 Following industry news and research trends..."
 
         # 读取模板并替换
         # 这里我们直接嵌入完整的HTML
@@ -159,6 +185,9 @@ class HTMLGenerator:
             counts=counts,
             mood=mood,
             stats_text=stats_text,
+            key_insight=key_insight,
+            mentioned_companies=mentioned_companies,
+            companies_tracked=self.data.get('companies_tracked', []),
             news_html=news_html,
             last_updated=formatted_time
         )
@@ -357,6 +386,23 @@ class HTMLGenerator:
             color: #ffb000;
             line-height: 1.6;
             font-size: 14px;
+        }}
+
+        .digest-key-insight {{
+            color: #ffcc00;
+            margin-bottom: 12px;
+            padding: 10px;
+            background: rgba(255, 176, 0, 0.1);
+            border-left: 3px solid #ffcc00;
+            margin-top: 8px;
+            font-size: 13px;
+            font-weight: bold;
+        }}
+
+        .digest-companies {{
+            color: #00cccc;
+            margin-bottom: 8px;
+            font-size: 13px;
         }}
 
         /* 新闻列表 */
@@ -618,9 +664,20 @@ class HTMLGenerator:
             <div class="digest-stats">
                 {kwargs['stats_text']}
             </div>
+            <div class="digest-key-insight">
+                {kwargs['key_insight']}
+            </div>
+'''
+        # 添加公司提及
+        if kwargs.get('mentioned_companies'):
+            html_content += f'''
+            <div class="digest-companies">
+                🏢 COMPANIES: {', '.join(kwargs['mentioned_companies'][:3])}
+            </div>
+'''
+        html_content += f'''
             <div class="digest-content">
-                KEY INSIGHT: Tracking the latest developments in embodied intelligence and humanoid robotics.
-                Stay updated with papers, products, funding news, and industry trends from around the world.
+                📄 LAST UPDATE: {kwargs['last_updated']} | 🌐 TRACKING: {len(kwargs.get('mentioned_companies', [])) + len(kwargs.get('companies_tracked', [kwargs.get('total_items', 0)]))} key companies
             </div>
         </div>
 

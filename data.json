@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-30T20:13:13.593398",
+  "last_updated": "2026-01-31T22:05:29.901210",
   "total_items": 15,
   "companies_tracked": [
     "tesla",
@@ -119,6 +119,27 @@
     ],
     "news": [
       {
+        "title": "A peek inside Physical Intelligence, the startup building Silicon Valley’s buzziest robot brains",
+        "link": "https://techcrunch.com/2026/01/30/physical-intelligence-stripe-veteran-lachy-grooms-latest-bet-is-building-silicon-valleys-buzziest-robot-brains/",
+        "source": "TechCrunch",
+        "category": "news",
+        "timestamp": "Sat, 31 Jan 2026 00:09:54 +0000"
+      },
+      {
+        "title": "OpenClaw’s AI assistants are now building their own social network",
+        "link": "https://techcrunch.com/2026/01/30/openclaws-ai-assistants-are-now-building-their-own-social-network/",
+        "source": "TechCrunch",
+        "category": "news",
+        "timestamp": "Fri, 30 Jan 2026 23:36:34 +0000"
+      },
+      {
+        "title": "Anthropic brings agentic plug-ins to Cowork",
+        "link": "https://techcrunch.com/2026/01/30/anthropic-brings-agentic-plugins-to-cowork/",
+        "source": "TechCrunch",
+        "category": "news",
+        "timestamp": "Fri, 30 Jan 2026 18:00:00 +0000"
+      },
+      {
         "title": "Guys, I don’t think Tim Cook knows how to monetize AI",
         "link": "https://techcrunch.com/2026/01/29/guys-i-dont-think-tim-cook-knows-how-to-monetize-ai/",
         "source": "TechCrunch",
@@ -131,27 +152,6 @@
         "source": "TechCrunch",
         "category": "news",
         "timestamp": "Thu, 29 Jan 2026 22:47:42 +0000"
-      },
-      {
-        "title": "Satya Nadella insists people are using Microsoft’s Copilot AI a lot",
-        "link": "https://techcrunch.com/2026/01/29/satya-nadella-insists-people-are-using-microsofts-copilot-ai-a-lot/",
-        "source": "TechCrunch",
-        "category": "news",
-        "timestamp": "Thu, 29 Jan 2026 20:06:56 +0000"
-      },
-      {
-        "title": "Music publishers sue Anthropic for $3B over ‘flagrant piracy’ of 20,000 works",
-        "link": "https://techcrunch.com/2026/01/29/music-publishers-sue-anthropic-for-3b-over-flagrant-piracy-of-20000-works/",
-        "source": "TechCrunch",
-        "category": "news",
-        "timestamp": "Thu, 29 Jan 2026 16:30:29 +0000"
-      },
-      {
-        "title": "India is teaching Google how AI in education can scale",
-        "link": "https://techcrunch.com/2026/01/29/india-is-teaching-google-how-ai-in-education-can-scale/",
-        "source": "TechCrunch",
-        "category": "news",
-        "timestamp": "Thu, 29 Jan 2026 15:29:31 +0000"
       }
     ],
     "funding": [],

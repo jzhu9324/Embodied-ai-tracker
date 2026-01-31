@@ -186,6 +186,23 @@
             font-size: 14px;
         }
 
+        .digest-key-insight {
+            color: #ffcc00;
+            margin-bottom: 12px;
+            padding: 10px;
+            background: rgba(255, 176, 0, 0.1);
+            border-left: 3px solid #ffcc00;
+            margin-top: 8px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .digest-companies {
+            color: #00cccc;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
         /* 新闻列表 */
         .news-section {
             border: 2px solid #ffb000;
@@ -409,7 +426,7 @@
             <h1>╚═══════════════════════════════════════════════╝</h1>
             <div class="status-bar">
                 <div>STATUS: SYSTEM READY ✓</div>
-                <div>LAST SCAN: 2026-01-30 20:13:13 UTC</div>
+                <div>LAST SCAN: 2026-01-31 22:05:29 UTC</div>
             </div>
         </div>
 
@@ -443,254 +460,8 @@
         <div class="digest">
             <div class="digest-title">TODAY'S DIGEST</div>
             <div class="digest-stats">
-                🤖 0 company updates | 📄 10 new papers | 💰 0 funding deals | 🔥 15 total items
+                🤖 10 papers | 💰 0 funding | 🔧 0 product | 📰 5 news | 🔥 15 total
             </div>
-            <div class="digest-content">
-                KEY INSIGHT: Tracking the latest developments in embodied intelligence and humanoid robotics.
-                Stay updated with papers, products, funding news, and industry trends from around the world.
+            <div class="digest-key-insight">
+                📄 Strong research momentum - 10 new papers on robotics & embodied AI
             </div>
-        </div>
-
-        <!-- 新闻列表（带Tab切换） -->
-        <div class="news-section">
-            <!-- Tab导航 -->
-            <div class="news-tabs">
-                <div class="tab-item active" data-category="all">
-                    [ALL] (15)
-                </div>
-                <div class="tab-item" data-category="funding">
-                    [💰 FUNDING] (0)
-                </div>
-                <div class="tab-item" data-category="product">
-                    [🔧 PRODUCT] (0)
-                </div>
-                <div class="tab-item" data-category="paper">
-                    [📄 PAPER] (10)
-                </div>
-                <div class="tab-item" data-category="news">
-                    [📰 新闻] (5)
-                </div>
-            </div>
-
-            <!-- 新闻内容 -->
-            <div class="news-content">
-                <div class="section-title">┌─ LAST 24 HOURS ─────────────────────────────────┐</div>
-
-
-                <div class="news-item show" data-category="paper">
-                    <span class="news-tag tag-paper">[📄 PAPER]</span>
-                    <div class="news-title">EmboCoach-Bench: Benchmarking AI Agents on Developing Embodied Robots</div>
-                    <div class="news-meta">
-                        The field of Embodied AI is witnessing a rapid evolution toward general-purpose robotic systems, fueled by high-fidelity simulation and large-scale da...
-                        <br>
-                        <a href="https://arxiv.org/abs/2601.21570v1" class="news-link">> Read more</a> | 1 day ago | Source: arXiv
-                    </div>
-                </div>
-
-                <div class="news-item show" data-category="paper">
-                    <span class="news-tag tag-paper">[📄 PAPER]</span>
-                    <div class="news-title">Towards Space-Based Environmentally-Adaptive Grasping</div>
-                    <div class="news-meta">
-                        Robotic manipulation in unstructured environments requires reliable execution under diverse conditions, yet many state-of-the-art systems still strugg...
-                        <br>
-                        <a href="https://arxiv.org/abs/2601.21394v1" class="news-link">> Read more</a> | 1 day ago | Source: arXiv
-                    </div>
-                </div>
-
-                <div class="news-item show" data-category="paper">
-                    <span class="news-tag tag-paper">[📄 PAPER]</span>
-                    <div class="news-title">DynamicVLA: A Vision-Language-Action Model for Dynamic Object Manipulation</div>
-                    <div class="news-meta">
-                        Manipulating dynamic objects remains an open challenge for Vision-Language-Action (VLA) models, which, despite strong generalization in static manipul...
-                        <br>
-                        <a href="https://arxiv.org/abs/2601.22153v1" class="news-link">> Read more</a> | 17 hours ago | Source: arXiv
-                    </div>
-                </div>
-
-                <div class="news-item show" data-category="paper">
-                    <span class="news-tag tag-paper">[📄 PAPER]</span>
-                    <div class="news-title">mjlab: A Lightweight Framework for GPU-Accelerated Robot Learning</div>
-                    <div class="news-meta">
-                        We present mjlab, a lightweight, open-source framework for robot learning that combines GPU-accelerated simulation with composable environments and mi...
-                        <br>
-                        <a href="https://arxiv.org/abs/2601.22074v1" class="news-link">> Read more</a> | 18 hours ago | Source: arXiv
-                    </div>
-                </div>
-
-                <div class="news-item show" data-category="paper">
-                    <span class="news-tag tag-paper">[📄 PAPER]</span>
-                    <div class="news-title">Information Filtering via Variational Regularization for Robot Manipulation</div>
-                    <div class="news-meta">
-                        Diffusion-based visuomotor policies built on 3D visual representations have achieved strong performance in learning complex robotic skills. However, m...
-                        <br>
-                        <a href="https://arxiv.org/abs/2601.21926v1" class="news-link">> Read more</a> | 19 hours ago | Source: arXiv
-                    </div>
-                </div>
-
-                <div class="news-item show" data-category="paper">
-                    <span class="news-tag tag-paper">[📄 PAPER]</span>
-                    <div class="news-title">Multi-Modular MANTA-RAY: A Modular Soft Surface Platform for Distributed Multi-Object Manipulation</div>
-                    <div class="news-meta">
-                        Manipulation surfaces control objects by actively deforming their shape rather than directly grasping them. While dense actuator arrays can generate c...
-                        <br>
-                        <a href="https://arxiv.org/abs/2601.21884v1" class="news-link">> Read more</a> | 20 hours ago | Source: arXiv
-                    </div>
-                </div>
-
-                <div class="news-item show" data-category="paper">
-                    <span class="news-tag tag-paper">[📄 PAPER]</span>
-                    <div class="news-title">Disentangling perception and reasoning for improving data efficiency in learning cloth manipulation without demonstrations</div>
-                    <div class="news-meta">
-                        Cloth manipulation is a ubiquitous task in everyday life, but it remains an open challenge for robotics. The difficulties in developing cloth manipula...
-                        <br>
-                        <a href="https://arxiv.org/abs/2601.21713v1" class="news-link">> Read more</a> | 22 hours ago | Source: arXiv
-                    </div>
-                </div>
-
-                <div class="news-item show" data-category="paper">
-                    <span class="news-tag tag-paper">[📄 PAPER]</span>
-                    <div class="news-title">CoFreeVLA: Collision-Free Dual-Arm Manipulation via Vision-Language-Action Model and Risk Estimation</div>
-                    <div class="news-meta">
-                        Vision Language Action (VLA) models enable instruction following manipulation, yet dualarm deployment remains unsafe due to under modeled selfcollisio...
-                        <br>
-                        <a href="https://arxiv.org/abs/2601.21712v1" class="news-link">> Read more</a> | 22 hours ago | Source: arXiv
-                    </div>
-                </div>
-
-                <div class="news-item show" data-category="paper">
-                    <span class="news-tag tag-paper">[📄 PAPER]</span>
-                    <div class="news-title">From Instruction to Event: Sound-Triggered Mobile Manipulation</div>
-                    <div class="news-meta">
-                        Current mobile manipulation research predominantly follows an instruction-driven paradigm, where agents rely on predefined textual commands to execute...
-                        <br>
-                        <a href="https://arxiv.org/abs/2601.21667v1" class="news-link">> Read more</a> | 23 hours ago | Source: arXiv
-                    </div>
-                </div>
-
-                <div class="news-item show" data-category="paper">
-                    <span class="news-tag tag-paper">[📄 PAPER]</span>
-                    <div class="news-title">AIR-VLA: Vision-Language-Action Systems for Aerial Manipulation</div>
-                    <div class="news-meta">
-                        While Vision-Language-Action (VLA) models have achieved remarkable success in ground-based embodied intelligence, their application to Aerial Manipula...
-                        <br>
-                        <a href="https://arxiv.org/abs/2601.21602v1" class="news-link">> Read more</a> | 1 day ago | Source: arXiv
-                    </div>
-                </div>
-
-                <div class="news-item show" data-category="news">
-                    <span class="news-tag tag-news">[📰 新闻]</span>
-                    <div class="news-title">Guys, I don’t think Tim Cook knows how to monetize AI</div>
-                    <div class="news-meta">
-                        
-                        <br>
-                        <a href="https://techcrunch.com/2026/01/29/guys-i-dont-think-tim-cook-knows-how-to-monetize-ai/" class="news-link">> Read more</a> | recently | Source: TechCrunch
-                    </div>
-                </div>
-
-                <div class="news-item show" data-category="news">
-                    <span class="news-tag tag-news">[📰 新闻]</span>
-                    <div class="news-title">Elon Musk’s SpaceX, Tesla, and xAI in talks to merge, according to reports</div>
-                    <div class="news-meta">
-                        
-                        <br>
-                        <a href="https://techcrunch.com/2026/01/29/elon-musk-spacex-tesla-xai-merger-talks-ipo-reuters/" class="news-link">> Read more</a> | recently | Source: TechCrunch
-                    </div>
-                </div>
-
-                <div class="news-item show" data-category="news">
-                    <span class="news-tag tag-news">[📰 新闻]</span>
-                    <div class="news-title">Satya Nadella insists people are using Microsoft’s Copilot AI a lot</div>
-                    <div class="news-meta">
-                        
-                        <br>
-                        <a href="https://techcrunch.com/2026/01/29/satya-nadella-insists-people-are-using-microsofts-copilot-ai-a-lot/" class="news-link">> Read more</a> | recently | Source: TechCrunch
-                    </div>
-                </div>
-
-                <div class="news-item show" data-category="news">
-                    <span class="news-tag tag-news">[📰 新闻]</span>
-                    <div class="news-title">Music publishers sue Anthropic for $3B over ‘flagrant piracy’ of 20,000 works</div>
-                    <div class="news-meta">
-                        
-                        <br>
-                        <a href="https://techcrunch.com/2026/01/29/music-publishers-sue-anthropic-for-3b-over-flagrant-piracy-of-20000-works/" class="news-link">> Read more</a> | recently | Source: TechCrunch
-                    </div>
-                </div>
-
-                <div class="news-item show" data-category="news">
-                    <span class="news-tag tag-news">[📰 新闻]</span>
-                    <div class="news-title">India is teaching Google how AI in education can scale</div>
-                    <div class="news-meta">
-                        
-                        <br>
-                        <a href="https://techcrunch.com/2026/01/29/india-is-teaching-google-how-ai-in-education-can-scale/" class="news-link">> Read more</a> | recently | Source: TechCrunch
-                    </div>
-                </div>
-
-
-                <div class="section-title">└──────────────────────────────────────────────────┘</div>
-            </div>
-        </div>
-
-        <!-- 底部导航 -->
-        <div class="nav">
-            <a href="#home" class="nav-item" title="返回首页">[HOME]</a>
-            <a href="#timeline" class="nav-item" title="按月时间线">[TIMELINE]</a>
-            <a href="#search" class="nav-item" title="搜索">[SEARCH]</a>
-        </div>
-
-        <!-- 页脚信息 -->
-        <div style="text-align: center; margin-top: 30px; padding: 20px; border-top: 1px dashed #ffb000; color: #888; font-size: 11px;">
-            <p>TRACKING THE FUTURE WITH RETRO STYLE | POWERED BY EMBODIED AI TRACKER</p>
-            <p style="margin-top: 5px;">🤖 MAKING ROBOTS SMARTER, ONE DAY AT A TIME</p>
-        </div>
-    </div>
-
-    <script>
-        // Tab切换功能
-        document.querySelectorAll('.tab-item').forEach(tab => {
-            tab.addEventListener('click', function() {
-                // 更新active状态
-                document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-
-                // 筛选新闻
-                const category = this.dataset.category;
-                const newsItems = document.querySelectorAll('.news-item');
-
-                newsItems.forEach(item => {
-                    if (category === 'all' || item.dataset.category === category) {
-                        item.classList.add('show');
-                    } else {
-                        item.classList.remove('show');
-                    }
-                });
-            });
-        });
-
-        // 新闻项点击效果
-        document.querySelectorAll('.news-item').forEach(item => {
-            item.addEventListener('click', function() {
-                this.style.transition = 'all 0.2s';
-                const originalBg = this.style.background;
-                this.style.background = 'rgba(0,255,0,0.2)';
-                setTimeout(() => {
-                    this.style.background = originalBg;
-                }, 300);
-            });
-        });
-
-        // 随机闪烁效果
-        setInterval(() => {
-            const items = document.querySelectorAll('.news-item.show');
-            if (items.length > 0) {
-                const randomItem = items[Math.floor(Math.random() * items.length)];
-                randomItem.style.opacity = '0.7';
-                setTimeout(() => {
-                    randomItem.style.opacity = '1';
-                }, 100);
-            }
-        }, 5000);
-    </script>
-</body>
-</html>
