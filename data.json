@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-31T22:05:29.901210",
+  "last_updated": "2026-02-23T19:44:04.735570",
   "total_items": 15,
   "companies_tracked": [
     "tesla",
@@ -27,134 +27,135 @@
   "data": {
     "papers": [
       {
-        "title": "EmboCoach-Bench: Benchmarking AI Agents on Developing Embodied Robots",
-        "authors": "Zixing Lei, Genjia Liu, Yuanshuo Zhang",
-        "summary": "The field of Embodied AI is witnessing a rapid evolution toward general-purpose robotic systems, fueled by high-fidelity simulation and large-scale da...",
-        "link": "https://arxiv.org/abs/2601.21570v1",
-        "published": "2026-01-29T11:33:49Z",
+        "title": "Nonlinear Predictive Control of the Continuum and Hybrid Dynamics of a Suspended Deformable Cable for Aerial Pick and Place",
+        "authors": "Antonio Rapuano, Yaolei Shen, Federico Califano",
+        "summary": "This paper presents a framework for aerial manipulation of an extensible cable that combines a high-fidelity model based on partial differential equat...",
+        "link": "https://arxiv.org/abs/2602.17199v1",
+        "published": "2026-02-19T09:38:32Z",
         "category": "paper",
         "source": "arXiv"
       },
       {
-        "title": "Towards Space-Based Environmentally-Adaptive Grasping",
-        "authors": "Leonidas Askianakis, Aleksandr Artemov",
-        "summary": "Robotic manipulation in unstructured environments requires reliable execution under diverse conditions, yet many state-of-the-art systems still strugg...",
-        "link": "https://arxiv.org/abs/2601.21394v1",
-        "published": "2026-01-29T08:31:03Z",
+        "title": "Physical Human-Robot Interaction for Grasping in Augmented Reality via Rigid-Soft Robot Synergy",
+        "authors": "Huishi Huang, Jack Klusmann, Haozhe Wang",
+        "summary": "Hybrid rigid-soft robots combine the precision of rigid manipulators with the compliance and adaptability of soft arms, offering a promising approach ...",
+        "link": "https://arxiv.org/abs/2602.17128v1",
+        "published": "2026-02-19T06:56:47Z",
         "category": "paper",
         "source": "arXiv"
       },
       {
-        "title": "DynamicVLA: A Vision-Language-Action Model for Dynamic Object Manipulation",
-        "authors": "Haozhe Xie, Beichen Wen, Jiarui Zheng",
-        "summary": "Manipulating dynamic objects remains an open challenge for Vision-Language-Action (VLA) models, which, despite strong generalization in static manipul...",
-        "link": "https://arxiv.org/abs/2601.22153v1",
-        "published": "2026-01-29T18:59:51Z",
+        "title": "Benchmarking the Effects of Object Pose Estimation and Reconstruction on Robotic Grasping Success",
+        "authors": "Varun Burde, Pavel Burget, Torsten Sattler",
+        "summary": "3D reconstruction serves as the foundational layer for numerous robotic perception tasks, including 6D object pose estimation and grasp pose generatio...",
+        "link": "https://arxiv.org/abs/2602.17101v1",
+        "published": "2026-02-19T05:55:01Z",
         "category": "paper",
         "source": "arXiv"
       },
       {
-        "title": "mjlab: A Lightweight Framework for GPU-Accelerated Robot Learning",
-        "authors": "Kevin Zakka, Qiayuan Liao, Brent Yi",
-        "summary": "We present mjlab, a lightweight, open-source framework for robot learning that combines GPU-accelerated simulation with composable environments and mi...",
-        "link": "https://arxiv.org/abs/2601.22074v1",
-        "published": "2026-01-29T18:11:26Z",
+        "title": "Markerless 6D Pose Estimation and Position-Based Visual Servoing for Endoscopic Continuum Manipulators",
+        "authors": "Junhyun Park, Chunggil An, Myeongbo Park",
+        "summary": "Continuum manipulators in flexible endoscopic surgical systems offer high dexterity for minimally invasive procedures; however, accurate pose estimati...",
+        "link": "https://arxiv.org/abs/2602.16365v1",
+        "published": "2026-02-18T11:08:32Z",
         "category": "paper",
         "source": "arXiv"
       },
       {
-        "title": "Information Filtering via Variational Regularization for Robot Manipulation",
-        "authors": "Jinhao Zhang, Wenlong Xia, Yaojia Wang",
-        "summary": "Diffusion-based visuomotor policies built on 3D visual representations have achieved strong performance in learning complex robotic skills. However, m...",
-        "link": "https://arxiv.org/abs/2601.21926v1",
-        "published": "2026-01-29T16:17:42Z",
+        "title": "Reactive Slip Control in Multifingered Grasping: Hybrid Tactile Sensing and Internal-Force Optimization",
+        "authors": "Théo Ayral, Saifeddine Aloui, Mathieu Grossard",
+        "summary": "We present a hybrid learning and model-based approach that adapts internal grasp forces to halt in-hand slip on a multifingered robotic gripper. A mul...",
+        "link": "https://arxiv.org/abs/2602.16127v1",
+        "published": "2026-02-18T01:37:07Z",
         "category": "paper",
         "source": "arXiv"
       },
       {
-        "title": "Multi-Modular MANTA-RAY: A Modular Soft Surface Platform for Distributed Multi-Object Manipulation",
-        "authors": "Pratik Ingle, Jørn Lambertsen, Kasper Støy",
-        "summary": "Manipulation surfaces control objects by actively deforming their shape rather than directly grasping them. While dense actuator arrays can generate c...",
-        "link": "https://arxiv.org/abs/2601.21884v1",
-        "published": "2026-01-29T15:46:50Z",
+        "title": "SimVLA: A Simple VLA Baseline for Robotic Manipulation",
+        "authors": "Yuankai Luo, Woping Chen, Tong Liang",
+        "summary": "Vision-Language-Action (VLA) models have emerged as a promising paradigm for general-purpose robotic manipulation, leveraging large-scale pre-training...",
+        "link": "https://arxiv.org/abs/2602.18224v1",
+        "published": "2026-02-20T14:04:27Z",
         "category": "paper",
         "source": "arXiv"
       },
       {
-        "title": "Disentangling perception and reasoning for improving data efficiency in learning cloth manipulation without demonstrations",
-        "authors": "Donatien Delehelle, Fei Chen, Darwin Caldwell",
-        "summary": "Cloth manipulation is a ubiquitous task in everyday life, but it remains an open challenge for robotics. The difficulties in developing cloth manipula...",
-        "link": "https://arxiv.org/abs/2601.21713v1",
-        "published": "2026-01-29T13:41:35Z",
+        "title": "Latent Diffeomorphic Co-Design of End-Effectors for Deformable and Fragile Object Manipulation",
+        "authors": "Kei Ikemura, Yifei Dong, Florian T. Pokorny",
+        "summary": "Manipulating deformable and fragile objects remains a fundamental challenge in robotics due to complex contact dynamics and strict requirements on obj...",
+        "link": "https://arxiv.org/abs/2602.17921v1",
+        "published": "2026-02-20T00:33:20Z",
         "category": "paper",
         "source": "arXiv"
       },
       {
-        "title": "CoFreeVLA: Collision-Free Dual-Arm Manipulation via Vision-Language-Action Model and Risk Estimation",
-        "authors": "Xuanran Zhai, Binkai Ou, Yemin Wang",
-        "summary": "Vision Language Action (VLA) models enable instruction following manipulation, yet dualarm deployment remains unsafe due to under modeled selfcollisio...",
-        "link": "https://arxiv.org/abs/2601.21712v1",
-        "published": "2026-01-29T13:40:46Z",
+        "title": "MALLVI: A Multi-Agent Framework for Integrated Generalized Robotics Manipulation",
+        "authors": "Iman Ahmadi, Mehrshad Taji, Arad Mahdinezhad Kashani",
+        "summary": "Task planning for robotic manipulation with large language models (LLMs) is an emerging area. Prior approaches rely on specialized models, fine tuning...",
+        "link": "https://arxiv.org/abs/2602.16898v2",
+        "published": "2026-02-18T21:28:56Z",
         "category": "paper",
         "source": "arXiv"
       },
       {
-        "title": "From Instruction to Event: Sound-Triggered Mobile Manipulation",
-        "authors": "Hao Ju, Shaofei Huang, Hongyu Li",
-        "summary": "Current mobile manipulation research predominantly follows an instruction-driven paradigm, where agents rely on predefined textual commands to execute...",
-        "link": "https://arxiv.org/abs/2601.21667v1",
-        "published": "2026-01-29T13:02:10Z",
+        "title": "SimToolReal: An Object-Centric Policy for Zero-Shot Dexterous Tool Manipulation",
+        "authors": "Kushal Kedia, Tyler Ga Wei Lum, Jeannette Bohg",
+        "summary": "The ability to manipulate tools significantly expands the set of tasks a robot can perform. Yet, tool manipulation represents a challenging class of d...",
+        "link": "https://arxiv.org/abs/2602.16863v1",
+        "published": "2026-02-18T20:42:39Z",
         "category": "paper",
         "source": "arXiv"
       },
       {
-        "title": "AIR-VLA: Vision-Language-Action Systems for Aerial Manipulation",
-        "authors": "Jianli Sun, Bin Tian, Qiyao Zhang",
-        "summary": "While Vision-Language-Action (VLA) models have achieved remarkable success in ground-based embodied intelligence, their application to Aerial Manipula...",
-        "link": "https://arxiv.org/abs/2601.21602v1",
-        "published": "2026-01-29T12:09:00Z",
+        "title": "One Hand to Rule Them All: Canonical Representations for Unified Dexterous Manipulation",
+        "authors": "Zhenyu Wei, Yunchao Yao, Mingyu Ding",
+        "summary": "Dexterous manipulation policies today largely assume fixed hand designs, severely restricting their generalization to new embodiments with varied kine...",
+        "link": "https://arxiv.org/abs/2602.16712v1",
+        "published": "2026-02-18T18:59:57Z",
         "category": "paper",
         "source": "arXiv"
       }
     ],
     "news": [
       {
-        "title": "A peek inside Physical Intelligence, the startup building Silicon Valley’s buzziest robot brains",
-        "link": "https://techcrunch.com/2026/01/30/physical-intelligence-stripe-veteran-lachy-grooms-latest-bet-is-building-silicon-valleys-buzziest-robot-brains/",
+        "title": "Defense Secretary summons Anthropic’s Amodei over military use of Claude",
+        "link": "https://techcrunch.com/2026/02/23/defense-secretary-summons-anthropics-amodei-over-military-use-of-claude/",
         "source": "TechCrunch",
         "category": "news",
-        "timestamp": "Sat, 31 Jan 2026 00:09:54 +0000"
+        "timestamp": "Mon, 23 Feb 2026 14:19:10 +0000"
       },
       {
-        "title": "OpenClaw’s AI assistants are now building their own social network",
-        "link": "https://techcrunch.com/2026/01/30/openclaws-ai-assistants-are-now-building-their-own-social-network/",
+        "title": "All the important news from the ongoing India AI Impact Summit",
+        "link": "https://techcrunch.com/2026/02/22/all-the-important-news-from-the-ongoing-india-ai-summit/",
         "source": "TechCrunch",
         "category": "news",
-        "timestamp": "Fri, 30 Jan 2026 23:36:34 +0000"
+        "timestamp": "Sun, 22 Feb 2026 17:00:00 +0000"
       },
       {
-        "title": "Anthropic brings agentic plug-ins to Cowork",
-        "link": "https://techcrunch.com/2026/01/30/anthropic-brings-agentic-plugins-to-cowork/",
+        "title": "The creator economy’s ad revenue problem and India’s AI ambitions",
+        "link": "https://techcrunch.com/video/the-creator-economys-ad-revenue-problem-and-indias-ai-ambitions/",
         "source": "TechCrunch",
         "category": "news",
-        "timestamp": "Fri, 30 Jan 2026 18:00:00 +0000"
+        "timestamp": "Fri, 20 Feb 2026 23:00:00 +0000"
       },
       {
-        "title": "Guys, I don’t think Tim Cook knows how to monetize AI",
-        "link": "https://techcrunch.com/2026/01/29/guys-i-dont-think-tim-cook-knows-how-to-monetize-ai/",
+        "title": "Why creators are ditching ad revenue for chocolate bars and fintech acquisitions",
+        "link": "https://techcrunch.com/podcast/why-creators-are-ditching-ad-revenue-for-chocolate-bars-and-fintech-acquisitions/",
         "source": "TechCrunch",
         "category": "news",
-        "timestamp": "Thu, 29 Jan 2026 23:51:17 +0000"
-      },
-      {
-        "title": "Elon Musk’s SpaceX, Tesla, and xAI in talks to merge, according to reports",
-        "link": "https://techcrunch.com/2026/01/29/elon-musk-spacex-tesla-xai-merger-talks-ipo-reuters/",
-        "source": "TechCrunch",
-        "category": "news",
-        "timestamp": "Thu, 29 Jan 2026 22:47:42 +0000"
+        "timestamp": "Fri, 20 Feb 2026 22:24:37 +0000"
       }
     ],
     "funding": [],
-    "products": []
+    "products": [
+      {
+        "title": "Anthropic announces proof of distillation at scale by MiniMax, DeepSeek,Moonshot",
+        "link": "https://twitter.com/anthropicai/status/2025997928242811253",
+        "source": "Hacker News (74 pts)",
+        "category": "product",
+        "timestamp": "2026-02-23T18:33:38"
+      }
+    ]
   }
 }
